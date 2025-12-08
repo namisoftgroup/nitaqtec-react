@@ -1,0 +1,97 @@
+.packages {
+  padding: 60px 0;
+  background: #fff;
+  color: $main;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    button {
+      border: 1px solid $second;
+      padding: 4px 32px;
+      width: 130px;
+      border-radius: 100px;
+      color: $second;
+      transition: 0.3s ease-in-out;
+      &.h {
+        color: $white;
+        background: $second;
+      }
+    }
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    color: $second;
+    margin-bottom: 12px;
+  }
+}
+
+.package_card {
+  border: 1px solid $stroke;
+  background: #6c3c861b;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background: $second;
+    ul {
+      li {
+        color: $white;
+      }
+    }
+  }
+
+  h5 {
+    color: $white;
+    background: $second;
+    padding: 16px;
+  }
+
+  a {
+    background: $lightbg;
+    padding: 8px 24px;
+    width: fit-content;
+    border-radius: 40px;
+    color: $second;
+    margin: 0 auto 16px;
+    transition: 0.3s ease-in-out;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+    margin: 0 0 12px;
+
+    border-bottom: 1px solid $stroke;
+    margin-bottom: 16px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      i {
+        color: #4caf50;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+footer {
+  padding: 60px 0 0;
+  border-top: 1px solid $stroke;
+  .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    img {
+      height: 48px;
+    }
+    p {
+      padding-inline-end: 32px;
+      color: $gray;
+      @media screen and (max-width: 576px) {
+        padding-inline-end: 0;
+      }
+    }
+  }
+  .col_info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    h3 {
+      color: $main;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        background: $second;
+        border-radius: 4px;
+        width: 15%;
+        bottom: -8px;
+        right: 0;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      li {
+        color: $main;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        a {
+          color: $main;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: $second;
+          }
+        }
+      }
+    }
+  }
+  .copy_rights {
+    padding: 24px 0;
+    margin-top: 24px;
+    border-top: 1px solid $stroke;
+    @include space-between();
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+    p {
+      color: $main;
+      margin: 0;
+      font-size: 16px;
+    }
+    .social_media {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      a {
+        transition: 0.3s ease-in-out;
+        border: 1px solid $stroke;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $main;
+        &:hover {
+          background: $main;
+          color: $white;
+        }
+      }
+    }
+  }
+}

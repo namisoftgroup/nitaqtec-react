@@ -1,0 +1,161 @@
+.project_card {
+  width: 100%;
+  border-radius: 16px;
+  background: $lightbg;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  img {
+    aspect-ratio: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: 0.3s ease-in-out;
+  }
+  .img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    .link {
+      @include centerAbsolute();
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      z-index: 9;
+      @include centerFlex();
+      transform: translate(-50%, -50%) scale(0);
+      transition: 0.3s ease-in-out;
+      span {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: $white;
+        @include centerFlex();
+        transition: 0.3s ease-in-out;
+        i {
+          color: $main;
+          font-size: 24px;
+          transition: 0.3s ease-in-out;
+        }
+        &:hover i {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  &:hover {
+    .img {
+      img {
+        transform: scale(1.05);
+      }
+      .link {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-end;
+    h6 {
+      color: $main;
+      margin: 0;
+      font-size: 24px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-align: start !important;
+      overflow: hidden;
+    }
+    p {
+      color: $gray;
+      font-size: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-align: start !important;
+      overflow: hidden;
+      margin: 0;
+    }
+    .tags {
+      color: $main;
+      font-size: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      span {
+        line-height: normal;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        &::after {
+          content: "";
+          width: 6px;
+          height: 6px;
+          background: $main;
+          border-radius: 50%;
+        }
+        &:last-child::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.blog_card {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid $stroke;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .img {
+    width: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 3 / 2;
+      border-radius: 16px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 16px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #10101090;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+      text-align: start;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      margin: 0;
+      -webkit-box-orient: vertical;
+      overflow-y: hidden;
+      color: $main;
+    }
+    a {
+      color: $main;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+}
