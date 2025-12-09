@@ -22,13 +22,30 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLang = (newLang) => {
-    queryClient.invalidateQueries();
-    queryClient.removeQueries();
+  // const handleLang = (newLang) => {
+  //   queryClient.invalidateQueries();
+  //   queryClient.removeQueries();
+  //   dispatch(setLanguage(newLang));
+  //   i18next.changeLanguage(newLang);
+  //   document.body.classList.toggle("en", newLang === "en");
+  // };
+
+
+    const handleLang = () => {
+    const newLang = lang === "ar" ? "en" : "ar";
+
     dispatch(setLanguage(newLang));
+    localStorage.setItem("lang", newLang);
     i18next.changeLanguage(newLang);
-    document.body.classList.toggle("en", newLang === "en");
+
+    queryClient.invalidateQueries({ queryKey: [] });
+
+    document.body.classList.remove("en", "ar");
+    document.body.classList.add(newLang);
   };
+
+
+
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -119,7 +136,7 @@ export default function NavBar() {
         >
           {t("companyFile")}
         </a>
-        <button onClick={() => handleLang(lang === "en" ? "ar" : "en")}>
+        <button onClick={handleLang}>
           {lang === "en" ? "AR" : "EN"}
         </button>
         <button className="menu-button" onClick={toggleMenu}>

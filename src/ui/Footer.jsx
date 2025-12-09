@@ -15,7 +15,11 @@ export default function Footer() {
           <div className="col-lg-4 col-12 p-2">
             <div className="logo">
               <Link to="/">
-                <img src="/images/logo-h.svg" loading="lazy" alt="وبل نجد" />
+                <img
+                  src="/images/logo-h.svg"
+                  loading="lazy"
+                  alt="النطاق الشبكي"
+                />
               </Link>
               <p>{t("footerAbout")}</p>
             </div>
@@ -26,9 +30,7 @@ export default function Footer() {
               <ul>
                 {services?.map((service) => (
                   <li key={service.id}>
-                    <Link to={`/services/${service.id}`}>
-                      {service.title}
-                    </Link>
+                    <Link to={`/services/${service.id}`}>{service.title}</Link>
                   </li>
                 ))}
               </ul>
@@ -57,7 +59,7 @@ export default function Footer() {
             <div className="copy_rights">
               <p>
                 &copy; {new Date().getFullYear()} {t("allRightsReserved")}{" "}
-                {t("forWabelNajd")}
+                {t("fornitaqNetwork")}
               </p>
               <div className="social_media">
                 <Link

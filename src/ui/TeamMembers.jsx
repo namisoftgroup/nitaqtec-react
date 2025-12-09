@@ -1,12 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
-import { useGetStuff } from "../hooks/useGetStuff";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useGetTeams } from "../hooks/home/useGetTeams";
 
 const TeamMembers = () => {
   const { t } = useTranslation();
-  const { stuff } = useGetStuff();
+  const { data } = useGetTeams();
+
+console.log(data);
+
+
   return (
     <section className="team">
       <div className="container">
@@ -24,24 +28,24 @@ const TeamMembers = () => {
           }}
           className="teamSwiper"
         >
-          {stuff?.map((member, index) => (
+          {data?.map((member, index) => (
             <SwiperSlide key={index}>
               <div className="team-member" data-aos="fade-up">
                 <div className="img">
                   <img src={member.image} alt={member.name} />
                   <ul className="social-media">
                     <li>
-                      <a href={member?.facebook} target="_blank">
+                      <a href={member?.facebook_link} target="_blank">
                         <i className="fa-brands fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a href={member?.insta}>
+                      <a href={member?.instagram_link}>
                         <i className="fa-brands fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href={member?.twitter}>
+                      <a href={member?.twitter_link}>
                         <i className="fa-brands fa-twitter"></i>
                       </a>
                     </li>

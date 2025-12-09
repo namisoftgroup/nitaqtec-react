@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 import { useGetServices } from "./../../hooks/services/useGetServices";
 import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
+import axios from "axios";
+import axiosInstance from "../../utils/axios";
+import { useQuery } from "@tanstack/react-query";
+import { useSelector } from "react-redux";
+import { useGetAboutCompany } from "../../hooks/home/useGetAboutCompany";
 
 export default function AboutUs() {
   const { t } = useTranslation();
   const [startCount, setStartCount] = useState(false);
-  const { services } = useGetServices();
   const sectionRef = useRef();
+const { data } = useGetAboutCompany();
 
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver(
@@ -32,6 +37,10 @@ export default function AboutUs() {
     };
   }, []);
 
+
+
+
+
   return (
     <section className="about_us_section" ref={sectionRef}>
       <div className="container">
@@ -45,10 +54,10 @@ export default function AboutUs() {
               <div className="about_footer" data-aos="zoom-in-up">
                 <div className="r_list">
                   <ul>
-                    {services?.map((service) => (
-                      <li key={service.id}>
+                    {data?.map((about) => (
+                      <li key={about.id}>
                         <i className="fa-light fa-badge-check"></i>{" "}
-                        {service.title}
+                        {about.title}
                       </li>
                     ))}
                   </ul>
