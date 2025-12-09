@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://api.wabelnajd.com.sa/api/",
+  baseURL: "http://127.0.0.1:8000/api",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
@@ -11,7 +11,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   (config) => {
     const lang = localStorage.getItem("lang") || "ar";
-    config.headers["lang"] = lang;
+    config.headers["Accept-Language"] = lang;
     return config;
   },
   (error) => {
