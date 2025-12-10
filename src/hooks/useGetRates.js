@@ -7,7 +7,7 @@ export function useGetRates() {
     
     queryFn: async () => {
       try {
-        const response = await axiosInstance.get("get_rates");
+        const response = await axiosInstance.get("testimonial");
         const data = response.data.data;
         return data;
       } catch (err) {

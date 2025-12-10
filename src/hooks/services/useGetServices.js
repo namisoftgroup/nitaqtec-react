@@ -18,21 +18,49 @@
 //   return { services: data, isLoading, error };
 // }
 
+// import { useQuery } from "@tanstack/react-query";
+// import axiosInstance from "../../utils/axios";
+// import { useSelector } from "react-redux";
+
+// export function useGetServices() {
+//   const { lang } = useSelector((state) => state.language);
+
+//   const { data } = useQuery({
+//     queryKey: ["services", lang],
+//     queryFn: () => axiosInstance.get("/services"),
+//     select: (data) => data?.data?.data,
+//     refetchOnWindowFocus: false,
+//     refetchOnMount: false,
+//     refetchOnReconnect: false,
+//   });
+
+//   return { services: data };
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { useQuery } from "@tanstack/react-query";
-import axiosInstance from "../../utils/axios";
-import { useSelector } from "react-redux";
+import { getServices } from "../../apiServices/apiServices";
 
 export function useGetServices() {
-  const { lang } = useSelector((state) => state.language);
-
-  const { data } = useQuery({
-    queryKey: ["services", lang],
-    queryFn: () => axiosInstance.get("/services"),
-    select: (data) => data?.data?.data,
+  const { data, error, isLoading } = useQuery({
+    queryKey: ["services"],
+    queryFn: getServices,
+    retry: false,
     refetchOnWindowFocus: false,
     refetchOnMount: false,
     refetchOnReconnect: false,
   });
 
-  return { services: data };
+  return { services: data, isLoading, error };
 }

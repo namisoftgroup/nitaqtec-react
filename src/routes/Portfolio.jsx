@@ -12,14 +12,10 @@ export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchParams, setSearchParams] = useSearchParams();
 
-  useEffect(() => {
-    const category = searchParams.get("category");
-    if (category) {
-      setActiveCategory(category);
-    } else {
-      setActiveCategory("all");
-    }
-  }, [searchParams]);
+ useEffect(() => {
+  const category = searchParams.get("category") || "all";
+  setActiveCategory(category);
+}, [searchParams]);
 
   return (
     <section className="portfolio_page">
@@ -47,10 +43,10 @@ export default function Portfolio() {
               {categories?.map((category) => (
                 <button
                   key={category?.id}
-                  className={activeCategory === category?.name ? "active" : ""}
-                  onClick={() => setSearchParams({ category: category?.name })}
+                  className={activeCategory === category?.title ? "active" : ""}
+                  onClick={() => setSearchParams({ category: category?.title })}
                 >
-                  {category?.name}
+                  {category?.title}
                 </button>
               ))}
             </div>

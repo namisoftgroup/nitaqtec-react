@@ -39,7 +39,7 @@ function Packages() {
                 data-aos="fade-up"
               >
                 <div className="package_card">
-                  <h5>{item.title}</h5>
+                  <h5>{item.name}</h5>
                   <ul>
                     {item?.features?.map((feature) => (
                       <li key={feature.id}>

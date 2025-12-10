@@ -1,12 +1,15 @@
-import { useGetServices } from "../../hooks/services/useGetServices";
 import { gradiants } from "./../../utils/data";
 import { useTranslation } from "react-i18next";
 import ServiceCard from "../cards/ServiceCard";
 import SectionHeader from "./SectionHeader";
+import { useGetServices } from "../../hooks/services/useGetServices";
 
 export default function OurServices() {
   const { services } = useGetServices();
   const { t } = useTranslation();
+
+  console.log(services);
+  
   return (
     <section className="our_services" id="services">
       <div className="container">

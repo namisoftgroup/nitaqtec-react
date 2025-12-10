@@ -42,7 +42,7 @@ export default function Footer() {
               <ul>
                 <li>
                   <i className="fa-sharp fa-light fa-location-crosshairs"></i>{" "}
-                  {settings?.address}
+                  {settings?.location}
                 </li>
                 <li>
                   <i className="fa-light fa-envelope"></i>

@@ -7,7 +7,7 @@ export default function useGetPackages() {
     queryKey: ["packages"],
 
     queryFn: async () => {
-      const res = await axiosInstance.get("/get_packages");
+      const res = await axiosInstance.get("/packages");
       return res?.data?.data;
     },
 

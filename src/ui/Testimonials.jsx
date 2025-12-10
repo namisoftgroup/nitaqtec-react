@@ -40,7 +40,7 @@ export default function Testimonials() {
                       ))}
                     </ul>
                   </div>
-                  <p className="opinion">{testimonial?.comment}</p>
+                  <p className="opinion">{testimonial?.message}</p>
                 </div>
                 <div className="owner">
                   <div className="d-flex gap-3 align-items-center">

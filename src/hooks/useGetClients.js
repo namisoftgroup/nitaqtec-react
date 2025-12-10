@@ -6,7 +6,7 @@ export function useGetClients() {
     queryKey: ["clients"],
     queryFn: async () => {
       try {
-        const response = await axiosInstance.get("get_customers");
+        const response = await axiosInstance.get("clients");
         const data = response.data.data;
         return data;
       } catch (err) {

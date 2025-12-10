@@ -2,7 +2,7 @@ import axiosInstance from "../utils/axios";
 
 export async function getProjects(category) {
   try {
-    const response = await axiosInstance.get("get_projects", {
+    const response = await axiosInstance.get("projects", {
       params: {
         category,
       },
@@ -17,7 +17,7 @@ export async function getProjects(category) {
 
 export async function getCategories() {
   try {
-    const response = await axiosInstance.get("get_categories");
+    const response = await axiosInstance.get("categories");
     const data = response.data.data;
     return data;
   } catch (err) {
@@ -28,7 +28,7 @@ export async function getCategories() {
 
 export async function getProject(id) {
   try {
-    const response = await axiosInstance.get(`project_details/${id}`);
+    const response = await axiosInstance.get(`projects/${id}`);
     const data = response.data.data;
     return data;
   } catch (err) {

@@ -1,4 +1,4 @@
-export default function ServicesBenefits() {
+export default function ServicesBenefits({serviceDetails}) {
   return (
     <section className="service_benifits">
       <div className="container">

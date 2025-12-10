@@ -9,6 +9,8 @@ export default function OurProjects() {
   const { t } = useTranslation();
   const { projects } = useGetProjects();
 
+  console.log(projects);
+  
   return (
     <section className="best_projects">
       <div className="container">

@@ -13,7 +13,7 @@ export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    type: "",
+    contact_type: "",
     service_id: "",
   });
   const { t } = useTranslation();
@@ -22,7 +22,7 @@ export default function ContactUs() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axiosInstance.post("send_contact_us", formData);
+      const res = await axiosInstance.post("contacts", formData);
       if (res.data.code === 200) {
         toast.success(t("sucessMessage"));
       }
@@ -137,13 +137,13 @@ export default function ContactUs() {
                 <div className="input_field">
                   <label htmlFor="type">{t("contactType")}</label>
                   <select
-                    name="type"
-                    id="type"
-                    value={formData.type}
+                    name="contact_type"
+                    id="contact_type"
+                    value={formData.contact_type}
                     onChange={(e) =>
                       setFormData((prev) => ({
                         ...prev,
-                        type: e.target.value,
+                        contact_type: e.target.value,
                       }))
                     }
                   >

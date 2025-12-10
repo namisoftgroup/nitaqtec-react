@@ -4,11 +4,11 @@ import { useSearchParams } from "react-router-dom";
 
 export function useGetProjects() {
   const [searchParams] = useSearchParams();
-  const category = searchParams.get("category");
+  const projects = searchParams.get("projects");
 
   const { data, error, isLoading } = useQuery({
     queryKey: ["projects"],
-    queryFn: () => getProjects(category),
+    queryFn: () => getProjects(projects),
     retry: false,
     refetchOnWindowFocus: false,
     refetchOnMount: false,

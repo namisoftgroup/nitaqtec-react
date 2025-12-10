@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-export default function ServiceHeroSection() {
+export default function ServiceHeroSection({serviceDetails}) {
   const { t } = useTranslation();
   return (
     <section className="service_hero_section">

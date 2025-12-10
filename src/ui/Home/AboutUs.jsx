@@ -38,6 +38,7 @@ const { data } = useGetAboutCompany();
   }, []);
 
 
+console.log(data);
 
 
 
@@ -47,14 +48,14 @@ const { data } = useGetAboutCompany();
         <div className="row">
           <div className="col-lg-6 col-12 p-2">
             <div className="content">
-              <h6 data-aos="zoom-in-up">{t("aboutSectionSubTitle")}</h6>
-              <h2 data-aos="zoom-in-up">{t("aboutSectionTitle")}</h2>
-              <p data-aos="zoom-in-up">{t("aboutSectionDesc")}</p>
+              <h6 data-aos="zoom-in-up">{data?.sub_title}</h6>
+              <h2 data-aos="zoom-in-up">{data?.title}</h2>
+              <p data-aos="zoom-in-up">{data?.description}</p>
 
               <div className="about_footer" data-aos="zoom-in-up">
                 <div className="r_list">
                   <ul>
-                    {data?.map((about) => (
+                    {data?.services.map((about) => (
                       <li key={about.id}>
                         <i className="fa-light fa-badge-check"></i>{" "}
                         {about.title}
@@ -71,7 +72,7 @@ const { data } = useGetAboutCompany();
                     <li>
                       <h3>
                         {startCount && (
-                          <CountUp duration={3} start={0} end={100} />
+                          <CountUp duration={3} start={0} end={data?.success_rate} />
                         )}
                         %
                       </h3>
@@ -80,7 +81,7 @@ const { data } = useGetAboutCompany();
                     <li>
                       <h3>
                         {startCount && (
-                          <CountUp duration={3} start={0} end={544} />
+                          <CountUp duration={3} start={0} end={data?.projects_completed} />
                         )}
                       </h3>
                       <p>{t("completedProjects")}</p>
@@ -93,13 +94,13 @@ const { data } = useGetAboutCompany();
           <div className="col-lg-6 col-12 p-2">
             <div className="about_imgs" data-aos="zoom-in-right">
               <div className="img">
-                <img src="/images/about1.jpg" alt="about" />
+                <img src={data?.image_one} alt="about" />
               </div>
               <div className="img toDown">
-                <img src="/images/about2.jpg" alt="about" />
+                <img src={data?.image_two} alt="about" />
               </div>
               <div className="wabel" d>
-                <img src="/images/fav.svg" alt="" />
+                <img src={data?.logo} alt="" />
               </div>
             </div>
           </div>

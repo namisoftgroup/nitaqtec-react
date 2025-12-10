@@ -6,7 +6,7 @@ export function useGetSettings() {
     queryKey: ["settings"],
     queryFn: async () => {
       try {
-        const response = await axiosInstance.get("get_settings");
+        const response = await axiosInstance.get("settings");
         const data = response.data.data;
         return data;
       } catch (err) {

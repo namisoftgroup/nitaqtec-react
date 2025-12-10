@@ -15,7 +15,7 @@ export default function BlogsSideBar() {
           ?.filter((blog) => blog?.id !== id)
           ?.map((blog) => (
             <li key={blog?.id}>
-              <Link to={`/blog-details/${blog?.id}`}>
+              <Link to={`/blogs/${blog?.id}`}>
                 <h4>{blog?.title}</h4>
               </Link>
             </li>

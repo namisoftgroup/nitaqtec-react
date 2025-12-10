@@ -32,10 +32,10 @@ export default function ProjectDetails() {
               <h1>{projectDetails?.title}</h1>
               <span>{projectDetails?.sub_title}</span>
               <div className="d-flex gap-4 flex-wrap">
-                <h6>
+                {/* <h6>
                   <i className="fa-solid fa-user"></i> {t("client")}{" "}
                   {projectDetails?.customer_name}
-                </h6>
+                </h6> */}
                 <h6>
                   <i className="fa-solid fa-calendar"></i> {t("date")}{" "}
                   {projectDetails?.date}

@@ -8,14 +8,14 @@ export default function ServiceCard({ service, gradient }) {
       className="service_card"
       data-aos="flip-left"
       style={{
-        backgroundImage: `${gradient}, url(${service.image})`,
+        backgroundImage: `${gradient}, url(${service?.background})`,
       }}
     >
       <div className="icon">
         <img src={service?.icon} alt="web" />
       </div>
       <h3>{service?.title}</h3>
-      <p>{service?.description}</p>
+      <p>{service?.sub_title}</p>
       <Link to={`/services/${service?.id}`}>
         {t("learnMore")} <i className="fa-regular fa-angle-left"></i>
       </Link>

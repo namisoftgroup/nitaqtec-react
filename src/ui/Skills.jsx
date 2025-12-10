@@ -2,9 +2,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useSelector } from "react-redux";
 import { skillsList } from "../utils/data";
+import { useSkillsTechniques } from "../hooks/About-us/useSkillsTechniques";
 
 export default function Skills() {
   const { lang } = useSelector((state) => state.language);
+  const { skill } = useSkillsTechniques();
+  console.log(skill);
+  
   return (
     <section className="skills_section">
       <Swiper
@@ -36,10 +40,10 @@ export default function Skills() {
           },
         }}
       >
-        {skillsList?.map((skill, index) => (
+        {skill?.map((skill, index) => (
           <SwiperSlide key={index}>
             <div className="img">
-              <img src={skill} alt={`skill ${index}`} />
+              <img src={skill?.image} alt={`skill ${index}`} />
             </div>
           </SwiperSlide>
         ))}

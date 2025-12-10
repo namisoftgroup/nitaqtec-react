@@ -6,7 +6,7 @@ export function useGetFaqs() {
     queryKey: ["faqs"],
     queryFn: async () => {
       try {
-        const response = await axiosInstance.get("faq_categories");
+        const response = await axiosInstance.get("faqs");
         const data = response.data.data;
         return data;
       } catch (err) {

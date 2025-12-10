@@ -12,7 +12,7 @@ export function useGetAboutCompany() {
   const { data } = useQuery({
     queryKey: ["aboutCompany", lang],
     queryFn: getAboutCompany,
-    select: (data) => data?.data?.data,
+    select: (data) => data?.data?.data[0],
     retry: false,
     refetchOnWindowFocus: false,
     refetchOnMount: false,

@@ -20,7 +20,7 @@ export default function BlogDetails() {
                   <div className="blog_header_actions">
                     <span className="date">
                       <i className="fa-light fa-calendar-days"></i>{" "}
-                      {dateFormat(blogsDetails.created_at)}
+                      {dateFormat(blogsDetails.date)}
                     </span>
                     <button className="share" onClick="share()">
                       <i className="fa-light fa-share-nodes"></i>

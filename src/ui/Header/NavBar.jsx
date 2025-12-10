@@ -5,14 +5,16 @@ import { setLanguage } from "../../redux/slices/language";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useGetSettings } from "../../hooks/useGetSettings";
-import { useGetCategories } from "../../hooks/projects/useGetCategories";
+// import { useGetCategories } from "../../hooks/projects/useGetCategories";
 import i18next from "i18next";
 import { Dropdown } from "react-bootstrap";
+import { useGetServices } from "../../hooks/services/useGetServices";
 
 export default function NavBar() {
   const { t } = useTranslation();
   const { settings } = useGetSettings();
-  const { categories } = useGetCategories();
+  // const { categories } = useGetCategories();
+  const { services } = useGetServices();
 
   const { lang } = useSelector((state) => state.language);
 
@@ -30,8 +32,7 @@ export default function NavBar() {
   //   document.body.classList.toggle("en", newLang === "en");
   // };
 
-
-    const handleLang = () => {
+  const handleLang = () => {
     const newLang = lang === "ar" ? "en" : "ar";
 
     dispatch(setLanguage(newLang));
@@ -43,9 +44,6 @@ export default function NavBar() {
     document.body.classList.remove("en", "ar");
     document.body.classList.add(newLang);
   };
-
-
-
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -92,13 +90,13 @@ export default function NavBar() {
             </Dropdown.Toggle>
             <Dropdown.Menu align="start">
               <div className="scroll_menu">
-                {categories?.map((category) => (
+                {services?.map((service) => (
                   <Dropdown.Item
-                    key={category?.id}
+                    key={service?.id}
                     as={Link}
-                    to={`/services?category=${category?.name}`}
+                    to={`/services/${service?.id}`}
                   >
-                    {category?.name}
+                    {service?.title}
                   </Dropdown.Item>
                 ))}
               </div>
@@ -136,9 +134,7 @@ export default function NavBar() {
         >
           {t("companyFile")}
         </a>
-        <button onClick={handleLang}>
-          {lang === "en" ? "AR" : "EN"}
-        </button>
+        <button onClick={handleLang}>{lang === "en" ? "AR" : "EN"}</button>
         <button className="menu-button" onClick={toggleMenu}>
           <i className="fa-light fa-bars"></i>
         </button>
