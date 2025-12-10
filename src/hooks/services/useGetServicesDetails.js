@@ -9,7 +9,7 @@ export function useGetServiceDetails() {
   const { data, error, isLoading } = useQuery({
     queryKey: ["service-details", id],
     queryFn: () => getServicesDetails(id),
-    select: (data) => data?.data?.data,
+    // select: (data) => data?.data?.data,
 
     enabled: !!id,
     retry: false,

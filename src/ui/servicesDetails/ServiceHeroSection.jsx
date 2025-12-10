@@ -10,7 +10,10 @@ export default function ServiceHeroSection({serviceDetails}) {
           <div className="col-12 p-2">
             <div className="service_details_header">
               <div className="text">
-                <h1>برمجة تطبيقات الجوال الاحترافية</h1>
+                <h1>
+                  {/* برمجة تطبيقات الجوال الاحترافية */}
+                  <span> {serviceDetails?.title}</span>
+                </h1>
                 <ul>
                   <li>
                     <i className="fa-light fa-circle-check"></i>

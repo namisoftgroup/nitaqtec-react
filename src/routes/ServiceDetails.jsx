@@ -7,6 +7,9 @@ import WhatWeOffer from "../ui/servicesDetails/WhatWeOffer";
 export default function ServiceDetails() {
   const { serviceDetails } = useGetServiceDetails();
 
+
+  console.log(serviceDetails);
+  
   return (
     <>
       <ServiceHeroSection serviceDetails={serviceDetails} />
