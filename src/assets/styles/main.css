@@ -217,6 +217,13 @@ body header nav .nav-links {
   transition: all 0.4s ease-in-out;
   z-index: 9;
 }
+body header nav .nav-links .dropdown-item {
+  font-size: 14px;
+  text-align: right;
+  width: 185px;
+  text-wrap-mode: wrap;
+  text-wrap-style: balance;
+}
 body header nav .nav-links img {
   height: 42px;
   -o-object-fit: contain;
@@ -740,7 +747,6 @@ body main .our_services h2 {
   color: #fff;
 }
 body main .our_services p {
-  /* text-align: center; */
   color: #fff;
   width: min(800px, 100%);
   margin: 0 auto;
@@ -856,6 +862,10 @@ body main .faqs_section .accordion .accordion-item .accordion-button::after {
 }
 body main .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   transform: rotate(0deg);
+}
+body main .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed) {
+  color: #2F3790 !important;
+  font-weight: bold;
 }
 body main .faqs_section .accordion .accordion-item .accordion-body {
   background: transparent !important;
@@ -1733,7 +1743,7 @@ body .page_header p {
 }
 body .service_card {
   padding: 48px 32px;
-  min-height: 340px;
+  height: 340px;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
@@ -2025,7 +2035,7 @@ body .packages .btns {
 body .packages .btns button {
   border: 1px solid #2F3790;
   padding: 4px 32px;
-  width: 130px;
+  min-width: 130px;
   border-radius: 100px;
   color: #2F3790;
   transition: 0.3s ease-in-out;
@@ -2043,14 +2053,14 @@ body .packages h3 {
   margin-bottom: 12px;
 }
 body .package_card {
-  min-height: 320px;
+  min-height: 445px;
+  max-height: 450px;
   border: 1px solid #f4f4f4;
   background: rgba(108, 60, 134, 0.1058823529);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  text-align: center;
   transition: 0.3s ease-in-out;
 }
 body .package_card:hover {
@@ -2063,6 +2073,7 @@ body .package_card h5 {
   color: #fff;
   background: #2F3790;
   padding: 16px;
+  text-align: center;
 }
 body .package_card a {
   background: #fafafa;
@@ -2086,7 +2097,6 @@ body .package_card ul {
 body .package_card ul li {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
 }
 body .package_card ul li i {
@@ -2101,6 +2111,9 @@ body.en .blog_card .content a i {
 }
 body.en header nav .nav-links a {
   font-size: 16px;
+}
+body.en header nav .nav-links a.dropdown-item {
+  text-align: left !important;
 }
 body.en main .about_section h5 {
   font-size: 16px;

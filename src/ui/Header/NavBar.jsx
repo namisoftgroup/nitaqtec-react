@@ -31,6 +31,7 @@ export default function NavBar() {
   //   i18next.changeLanguage(newLang);
   //   document.body.classList.toggle("en", newLang === "en");
   // };
+  console.log(settings);
 
   const handleLang = () => {
     const newLang = lang === "ar" ? "en" : "ar";
@@ -96,7 +97,7 @@ export default function NavBar() {
                     as={Link}
                     to={`/services/${service?.id}`}
                   >
-                    {service?.title}
+                    {service?.category_title}
                   </Dropdown.Item>
                 ))}
               </div>
@@ -125,15 +126,17 @@ export default function NavBar() {
       ></div>
 
       <div className="actions">
-        <a
-          href={settings?.pdf}
-          download={settings?.pdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="company_file"
-        >
-          {t("companyFile")}
-        </a>
+        {settings?.company_file &&
+          <a
+            href={settings?.company_file}
+            download={settings?.company_file}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="company_file"
+          >
+            {t("companyFile")}
+          </a>
+        }
         <button onClick={handleLang}>{lang === "en" ? "AR" : "EN"}</button>
         <button className="menu-button" onClick={toggleMenu}>
           <i className="fa-light fa-bars"></i>

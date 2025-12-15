@@ -46,7 +46,7 @@ export default function OurProjects() {
             </Swiper>
           </div>
           <div className="col-12 p-2" data-aos="fade-up">
-            <Link to="portfolio" className="view_more">
+            <Link to="/portfolio" className="view_more">
               {t("viewMore")}
             </Link>
           </div>

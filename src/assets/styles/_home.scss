@@ -294,7 +294,7 @@ main {
       color: $white;
     }
     p {
-      text-align: center;
+      // text-align: center;
       color: $white;
       width: min(800px, 100%);
       margin: 0 auto;
@@ -331,16 +331,19 @@ main {
   .faqs_section {
     padding: 60px 0;
     background: $lightbg;
+
     h2 {
       text-align: center;
       color: $main;
     }
+
     p {
       text-align: center;
       color: $gray;
       margin: 0 auto;
       width: min(800px, 100%);
     }
+
     .faq_side_content {
       display: flex;
       flex-direction: column;
@@ -385,29 +388,35 @@ main {
             color: $white !important;
           }
         }
-        .accordion-button {
-          box-shadow: none !important;
-          background: transparent !important;
-          color: $main !important;
-          text-align: start;
-          &::after {
-            content: "\f00d";
-            font-family: "Font Awesome 6 Pro";
-            background: none;
-            @include centerFlex();
-            font-size: 16px;
-            font-weight: 400;
-            transform: rotate(135deg);
-            transform-origin: center;
-            margin-right: auto;
-            margin-left: 0;
-          }
-          &:not(.collapsed)::after {
-            transform: rotate(0deg);
-          }
-        }
+      
+      .accordion-button {
+       box-shadow: none !important;
+       background: transparent !important;
+       color: $main !important;
+       text-align: start;
+       &::after {
+         content: "\f00d";
+         font-family: "Font Awesome 6 Pro";
+         background: none;
+         @include centerFlex();
+         font-size: 16px;
+         font-weight: 400;
+         transform: rotate(135deg);
+         transform-origin: center;
+         margin-right: auto;
+         margin-left: 0;
+       }
+       &:not(.collapsed)::after {
+         transform: rotate(0deg);
+       }
+         &:not(.collapsed) {
+         color: $second !important;
+         font-weight: bold;
+       }
+     }
         .accordion-body {
           background: transparent !important;
+          // color: $gray !important;
           p {
             color: $white !important;
             display: -webkit-box;
@@ -439,6 +448,7 @@ main {
       width: min(800px, 100%);
       margin: 0 auto;
     }
+    
   }
 
   .clients_section {

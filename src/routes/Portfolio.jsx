@@ -12,10 +12,15 @@ export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchParams, setSearchParams] = useSearchParams();
 
- useEffect(() => {
-  const category = searchParams.get("category") || "all";
-  setActiveCategory(category);
-}, [searchParams]);
+  useEffect(() => {
+    const category = searchParams.get("category") || "all";
+    setActiveCategory(category);
+  }, [searchParams]);
+
+  const filteredProjects =
+    activeCategory === "all"
+      ? projects
+      : projects?.filter((project) => project.category === activeCategory);
 
   return (
     <section className="portfolio_page">
@@ -51,7 +56,7 @@ export default function Portfolio() {
               ))}
             </div>
           </div>
-          {projects?.map((project) => (
+          {filteredProjects?.map((project) => (
             <div className=" col-lg-4 col-12 p-2" key={project.id}>
               <ProjectCard project={project} />
             </div>

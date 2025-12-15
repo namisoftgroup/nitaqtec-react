@@ -19,7 +19,7 @@
     button {
       border: 1px solid $second;
       padding: 4px 32px;
-      width: 130px;
+      min-width: 130px;
       border-radius: 100px;
       color: $second;
       transition: 0.3s ease-in-out;
@@ -41,14 +41,16 @@
 }
 
 .package_card {
-  min-height: 320px;
+  min-height: 445px;
+  max-height: 450px;
+
   border: 1px solid $stroke;
   background: #6c3c861b;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  text-align: center;
+  // text-align: center;
   transition: 0.3s ease-in-out;
 
   &:hover {
@@ -64,6 +66,7 @@
     color: $white;
     background: $second;
     padding: 16px;
+    text-align: center;
   }
 
   a {
@@ -88,7 +91,7 @@
     li {
       display: flex;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
       gap: 8px;
       i {
         color: #4caf50;

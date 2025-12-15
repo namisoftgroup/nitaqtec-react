@@ -16,11 +16,11 @@ export default function BlogDetails() {
             <div className="row">
               <div className="col-lg-9 col-12 p-2">
                 <div className="blog_header">
-                  <h1> {blogsDetails.title}</h1>
+                  <h1> {blogsDetails?.title}</h1>
                   <div className="blog_header_actions">
                     <span className="date">
                       <i className="fa-light fa-calendar-days"></i>{" "}
-                      {dateFormat(blogsDetails.date)}
+                      {dateFormat(blogsDetails?.date)}
                     </span>
                     <button className="share" onClick="share()">
                       <i className="fa-light fa-share-nodes"></i>
@@ -30,7 +30,7 @@ export default function BlogDetails() {
                 <div className="blog_content">
                   <div className="img">
                     <img
-                      src={blogsDetails.image}
+                      src={blogsDetails?.image}
                       alt="أفضل لغات البرمجة في 2024"
                     />
                   </div>

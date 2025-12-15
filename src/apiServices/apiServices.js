@@ -61,3 +61,15 @@ export async function getServicesDetails(id) {
   }
   
 }
+
+
+export async function getFeatures(id) {
+  try {
+    const response = await axiosInstance.get(`/features`);
+    const data = response.data.data;
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+  
+}

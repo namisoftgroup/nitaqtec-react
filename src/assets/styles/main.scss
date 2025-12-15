@@ -19,6 +19,10 @@ body {
     }
     header nav .nav-links a {
       font-size: 16px;
+
+      &.dropdown-item {
+        text-align: left !important;
+      }
     }
     main {
       .about_section h5 {

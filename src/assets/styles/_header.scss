@@ -1,3 +1,6 @@
+
+
+
 header {
   width: 100%;
   z-index: 1000;
@@ -42,6 +45,7 @@ header {
     }
   }
 
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -61,6 +65,15 @@ header {
       gap: 2.5rem;
       transition: all 0.4s ease-in-out;
       z-index: 9;
+
+      .dropdown-item {
+        font-size: 14px;
+        text-align: right;
+    width: 185px;
+    text-wrap-mode: wrap;
+    text-wrap-style: balance;
+      }
+      
       img {
         height: 42px;
         object-fit: contain;
@@ -87,15 +100,19 @@ header {
           right: 0;
         }
       }
+
       a {
         color: $main;
         font-size: 18px;
         transition: 0.3s ease-in-out;
+        // text-align: left;
         &:hover,
         &.active {
           color: $second;
         }
       }
+
+      
     }
     .layer {
       display: none;
