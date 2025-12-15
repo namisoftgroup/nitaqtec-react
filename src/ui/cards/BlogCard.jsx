@@ -5,7 +5,7 @@ export default function BlogCard({ blog }) {
   const { t } = useTranslation();
   return (
    <>
-    <Link to={`/blogs/${blog.id}`} className="blog_card">
+    <Link to={`/blogs/${blog.id}`} className="blog_card" data-aos="flip-up">
       <div className="img">
         <img src={blog.image} alt="أفضل لغات البرمجة في 2024" />
       </div>
