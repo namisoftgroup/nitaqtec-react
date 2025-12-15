@@ -1,4 +1,4 @@
-import OurProjects from "../ui/Home/OurProjects";
+// import OurProjects from "../ui/Home/OurProjects";
 import { useGetServiceDetails } from "../hooks/services/useGetServicesDetails";
 import ServiceHeroSection from "../ui/servicesDetails/ServiceHeroSection";
 import ServicesBenefits from "../ui/servicesDetails/ServicesBenefits";
@@ -12,7 +12,7 @@ export default function ServiceDetails() {
       <ServiceHeroSection serviceDetails={serviceDetails} />
       <ServicesBenefits serviceDetails={serviceDetails} />
       <WhatWeOffer serviceDetails={serviceDetails}/>
-      <OurProjects />
+      {/* <OurProjects /> */}
     </>
   );
 }
