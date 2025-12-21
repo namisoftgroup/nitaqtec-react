@@ -1189,6 +1189,7 @@ body main .service_benifits {
   background: #fafafa;
 }
 body main .service_benifits h2 {
+  font-size: 24px;
   text-align: center;
   color: #231f20;
 }

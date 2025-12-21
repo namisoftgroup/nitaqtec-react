@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function ServiceCard({ service, gradient }) {
   const { t } = useTranslation();
+  console.log(service);
+  
   return (
    <>
     <Link to={`/services/${service?.id}`}
@@ -15,7 +17,7 @@ export default function ServiceCard({ service, gradient }) {
       <div className="icon">
         <img src={service?.icon} alt="web" />
       </div>
-      <h3>{service?.category_title}</h3>
+      <h3>{service?.title}</h3>
       <p>{service?.sub_title}</p>
       <Link to={`/services/${service?.id}`}>
         {t("learnMore")} <i className="fa-regular fa-angle-left"></i>

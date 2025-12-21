@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function ServiceHeroSection({serviceDetails}) {
   const { t } = useTranslation();
+  console.log(serviceDetails);
+  
   return (
     <section className="service_hero_section">
       <div className="container">
