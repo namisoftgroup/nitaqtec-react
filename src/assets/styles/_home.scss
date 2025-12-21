@@ -111,7 +111,8 @@ main {
         background: $second;
       }
       h1 {
-        width: min(550px, 100%);
+        // width: min(550px, 100%);
+        width: min(600px, 100%);
         color: $main;
         font-size: 36px;
         font-weight: 600;
