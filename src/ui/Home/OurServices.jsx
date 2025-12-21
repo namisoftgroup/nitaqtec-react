@@ -8,7 +8,6 @@ export default function OurServices() {
   const { services } = useGetServices();
   const { t } = useTranslation();
 
-  console.log(services);
   
   return (
     <section className="our_services" id="services">

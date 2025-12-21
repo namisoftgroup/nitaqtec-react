@@ -153,6 +153,10 @@ export const gradiants = [
   "linear-gradient(135deg, rgba(41, 168, 71, 0.635) 0%, rgba(0, 123, 43, 0.839) 100%)",
   "linear-gradient(135deg, rgba(255, 193, 7, 0.764) 0%, rgba(255, 140, 0, 0.869) 100%)",
   "linear-gradient(135deg, rgba(220, 53, 70, 0.826) 0%, rgba(155, 0, 0, 0.806) 100%)",
+  "linear-gradient(135deg, rgba(123, 97, 255, 0.85) 0%, rgba(87, 0, 176, 0.9) 100%)",
+  "linear-gradient(135deg, rgba(255, 87, 34, 0.85) 0%, rgba(244, 67, 54, 0.9) 100%)",
+  "linear-gradient(135deg, rgba(0, 198, 255, 0.8) 0%, rgba(0, 114, 188, 0.95) 100%)",
+  "linear-gradient(135deg, rgba(255, 105, 180, 0.85) 0%, rgba(199, 21, 133, 0.9) 100%)"
 ];
 
 export const skillsList = [
