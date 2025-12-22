@@ -7,7 +7,7 @@ import { useSkillsTechniques } from "../hooks/About-us/useSkillsTechniques";
 export default function Skills() {
   const { lang } = useSelector((state) => state.language);
   const { skill } = useSkillsTechniques();
-  console.log(skill);
+ 
   
   return (
     <section className="skills_section">

@@ -17,7 +17,6 @@ export default function About() {
   
 
 
-  console.log(visionsMisionsData);
 
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver(
@@ -98,7 +97,7 @@ export default function About() {
            <div key={item.id} className="col-lg-4 col-12 p-2">
             <div className="borderd_box" data-aos="fade-up">
               <div className="img">
-                <img src={item?.icon} alt={item?.title} />
+                <img src={item?.icon} alt={item?.title} width={80} />
               </div>
               <div className="content">
                 <h3>{item?.title}</h3>

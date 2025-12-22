@@ -28,6 +28,7 @@ export default function RequestServiceModal({ show, setShow }) {
 
   const [formData, setFormData] = useState(initialFormData);
   const { ideas } = useGetIdeaDetails(formData.what_you_need_idea_id);
+console.log(ideas)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -180,7 +181,7 @@ export default function RequestServiceModal({ show, setShow }) {
                       checked={formData.what_you_need_idea_id === idea.id}
                       onChange={() => handleIdeaSelect(idea.id)}
                     />
-                    <span>{idea.name}</span>
+                    <span>{idea.title}</span>
                   </label>
                 ))}
               </div>

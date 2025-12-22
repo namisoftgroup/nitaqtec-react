@@ -6,7 +6,7 @@ export function useGetWhatYouNeed() {
     queryKey: ["what-you-need"],
     queryFn: async () => {
       try {
-        const response = await axiosInstance.get("get_what_you_need");
+        const response = await axiosInstance.get("needs");
         const data = response.data.data;
         return data;
       } catch (err) {

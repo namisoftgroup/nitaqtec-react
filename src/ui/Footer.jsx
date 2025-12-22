@@ -50,7 +50,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <i className="fa-sharp fa-light fa-phone"></i>
-                  <a href={`tel:${settings?.phone}`}>{settings?.phone}</a>
+                  <a className="phone-format" href={`tel:${settings?.phone}`}>{settings?.phone}</a>
                 </li>
               </ul>
             </div>

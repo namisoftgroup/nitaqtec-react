@@ -287,7 +287,8 @@ main {
   .our_services {
     padding: 60px 0;
     background: $lightbg;
-    background: linear-gradient(180deg, #2f3790d6, #2f3790d6), url(/images/bg-fixed1.jpg);
+    background: linear-gradient(180deg, #2f3790d6, #2f3790d6),
+      url(/images/bg-fixed1.jpg);
     background-size: cover;
     background-attachment: fixed;
     h2 {
@@ -389,32 +390,32 @@ main {
             color: $white !important;
           }
         }
-      
-      .accordion-button {
-       box-shadow: none !important;
-       background: transparent !important;
-       color: $main !important;
-       text-align: start;
-       &::after {
-         content: "\f00d";
-         font-family: "Font Awesome 6 Pro";
-         background: none;
-         @include centerFlex();
-         font-size: 16px;
-         font-weight: 400;
-         transform: rotate(135deg);
-         transform-origin: center;
-         margin-right: auto;
-         margin-left: 0;
-       }
-       &:not(.collapsed)::after {
-         transform: rotate(0deg);
-       }
-         &:not(.collapsed) {
-         color: $second !important;
-         font-weight: bold;
-       }
-     }
+
+        .accordion-button {
+          box-shadow: none !important;
+          background: transparent !important;
+          color: $main !important;
+          text-align: start;
+          &::after {
+            content: "\f00d";
+            font-family: "Font Awesome 6 Pro";
+            background: none;
+            @include centerFlex();
+            font-size: 16px;
+            font-weight: 400;
+            transform: rotate(135deg);
+            transform-origin: center;
+            margin-right: auto;
+            margin-left: 0;
+          }
+          &:not(.collapsed)::after {
+            transform: rotate(0deg);
+          }
+          &:not(.collapsed) {
+            color: $second !important;
+            font-weight: bold;
+          }
+        }
         .accordion-body {
           background: transparent !important;
           // color: $gray !important;
@@ -434,7 +435,6 @@ main {
   .blogs_section {
     padding: 60px 0;
 
-    
     background: linear-gradient(180deg, #2f3790d6, #2f3790d6),
       url("/images/bg-fixed2.jpg");
     background-size: cover;
@@ -449,7 +449,6 @@ main {
       width: min(800px, 100%);
       margin: 0 auto;
     }
-    
   }
 
   .clients_section {
@@ -499,7 +498,7 @@ main {
       }
       h2 {
         color: $main;
-        font-size: 48px;
+        font-size: 22px;
         @media screen and (max-width: 576px) {
           font-size: 32px;
         }
@@ -516,7 +515,7 @@ main {
           a {
             color: $main;
             transition: 0.3s ease-in-out;
-
+            
             &:hover {
               color: $second;
             }
@@ -776,6 +775,7 @@ main {
     h2 {
       text-align: center;
       color: $main;
+      font-size: 24px;
     }
     p {
       text-align: center;
@@ -999,6 +999,7 @@ form {
       border-radius: 12px;
       border: 1px solid $stroke;
       background-color: #fafafa;
+      direction: rtl;
     }
   }
   button,
@@ -1276,10 +1277,9 @@ form {
   padding: 60px 0;
 }
 
-
 .page_header {
   padding: 48px 0;
-  background: linear-gradient(180deg, #2F3790ce, #2F3790e2),
+  background: linear-gradient(180deg, #2f3790ce, #2f3790e2),
     url("/images/bg-fixed1.jpg");
   background-size: cover;
   background-attachment: fixed;

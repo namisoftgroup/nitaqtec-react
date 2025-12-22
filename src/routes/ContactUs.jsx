@@ -33,6 +33,7 @@ export default function ContactUs() {
       setLoading(false);
     }
   };
+  console.log(settings);
 
   return (
     <>
@@ -46,7 +47,7 @@ export default function ContactUs() {
                 <div className="blocks">
                   <div className="block">
                     <h6>{t("callCenter")}</h6>
-                    <a href={`tel:${settings?.phone}`}>{settings?.phone}</a>
+                    <a className="phone-format" href={`tel:${settings?.phone}`}>{settings?.phone}</a>
                   </div>
                   <div className="block">
                     <h6>{t("ourLocation")}</h6>
@@ -54,7 +55,7 @@ export default function ContactUs() {
                       href="https://www.google.com/maps/place/King+Abdullah+Park/@24.6474709,46.7602933,12387m/data=!3m1!1e3!4m6!3m5!1s0x3e2f043b45575437:0xa2bebdcec14359bd!8m2!3d24.6663657!4d46.7371594!16s%2Fg%2F11c76mxsyk?entry=ttu&amp;g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                     >
-                      {settings?.address}
+                      {settings?.location}
                     </a>
                   </div>
                   <div className="block">
@@ -191,13 +192,15 @@ export default function ContactUs() {
       </section>
       <div className="map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7535113.984671908!2d53.54736328124999!3d22.755920681486405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e25a515bcc5f541%3A0x3b01b7acbb324df8!2z2YbYrNiv!5e0!3m2!1sar!2seg!4v1738241118992!5m2!1sar!2seg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.700714265178!2d39.190066503210446!3d21.519915999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cfebc1cac343%3A0x62916f47ea0aa0f!2z2LTYsdmD2Kkg2KfZhNmG2LfYp9mCINin2YTYtNio2YPZiiDZhNiq2YLZhtmK2Kkg2KfZhNmF2LnZhNmI2YXYp9iq!5e1!3m2!1sar!2seg!4v1766403147188!5m2!1sar!2seg"
           height="350"
           width="100%"
           style={{ border: "0" }}
           allowfullscreen=""
           loading="lazy"
         ></iframe>
+
+      
       </div>
     </>
   );

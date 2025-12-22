@@ -1,6 +1,6 @@
 export default function ServicesBenefits({serviceDetails}) {
 
-  console.log(serviceDetails);
+  
   
 
   if (!serviceDetails) return null;

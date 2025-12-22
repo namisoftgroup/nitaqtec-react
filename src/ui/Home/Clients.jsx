@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslation } from "react-i18next";
 import { useGetClients } from "../../hooks/useGetClients";
+import { Autoplay } from "swiper/modules";
 
 export default function Clients() {
   const { t } = useTranslation();
@@ -17,7 +18,10 @@ export default function Clients() {
             <Swiper
               slidesPerView={5}
               spaceBetween={20}
-              loop="true"
+              loop
+              autoplay
+              modules={[Autoplay]}
+
               breakpoints={{
                 0: {
                   slidesPerView: 2,

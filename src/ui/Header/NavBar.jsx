@@ -31,7 +31,6 @@ export default function NavBar() {
   //   i18next.changeLanguage(newLang);
   //   document.body.classList.toggle("en", newLang === "en");
   // };
-  console.log(settings);
 
   const handleLang = () => {
     const newLang = lang === "ar" ? "en" : "ar";

@@ -6,7 +6,7 @@ export function useGetIdeaDetails(id) {
     queryKey: ["idea-details", id],
     queryFn: async () => {
       try {
-        const response = await axiosInstance.post("get_what_you_need_ideas", {
+        const response = await axiosInstance.post("project-ideas", {
           id,
         });
         const data = response.data.data;

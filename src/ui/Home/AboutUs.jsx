@@ -38,8 +38,6 @@ const { data } = useGetAboutCompany();
   }, []);
 
 
-console.log(data);
-
 
 
   return (

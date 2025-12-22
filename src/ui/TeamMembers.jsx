@@ -8,7 +8,6 @@ const TeamMembers = () => {
   const { t } = useTranslation();
   const { data } = useGetTeams();
 
-console.log(data);
 
 
   return (

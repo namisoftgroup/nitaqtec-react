@@ -12,6 +12,7 @@ export default function ServiceCard({ service, gradient }) {
       data-aos="flip-left"
       style={{
         backgroundImage: `${gradient}, url(${service?.image})`,
+        backgroundPosition: "center",
       }}
     >
       <div className="icon">

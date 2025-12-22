@@ -944,7 +944,7 @@ body main .contact_page .contact_info span {
 }
 body main .contact_page .contact_info h2 {
   color: #231f20;
-  font-size: 48px;
+  font-size: 22px;
 }
 @media screen and (max-width: 576px) {
   body main .contact_page .contact_info h2 {
@@ -1235,6 +1235,7 @@ body main .what_we_offer {
 body main .what_we_offer h2 {
   text-align: center;
   color: #231f20;
+  font-size: 24px;
 }
 body main .what_we_offer p {
   text-align: center;
@@ -1453,6 +1454,7 @@ body form .input_field textarea {
   border-radius: 12px;
   border: 1px solid #f4f4f4;
   background-color: #fafafa;
+  direction: rtl;
 }
 body form button,
 body form .btn {
@@ -2143,7 +2145,12 @@ body.en main .about_section .content h1 {
   font-size: 32px;
 }
 body.en main .contact_page .contact_info h2 {
-  font-size: 42px;
+  font-size: 22px;
+}
+body.en main .input_field input,
+body.en main .input_field select,
+body.en main .input_field textarea {
+  direction: ltr;
 }
 body.en footer .col_info h3::after {
   right: initial;
@@ -2151,6 +2158,9 @@ body.en footer .col_info h3::after {
 }
 body.en .modal-header .back-button i {
   transform: scale(1);
+}
+body.en a.phone-format {
+  text-align: left;
 }
 
 .map {
@@ -2172,4 +2182,9 @@ body.en .modal-header .back-button i {
 }
 .floating_btn img {
   height: 42px;
+}
+
+a.phone-format {
+  unicode-bidi: plaintext;
+  text-align: right;
 }/*# sourceMappingURL=main.css.map */
