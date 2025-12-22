@@ -40,9 +40,7 @@ function Packages() {
               >
                 <div className="package_card">
                   <h5>{item.name}</h5>
-                  {item.price && (
-                    <p className="package_price">{item.price}</p>
-                  )}
+                  {item.price && <p className="package_price">{item.price}</p>}
                   <ul>
                     {item?.features?.map((feature) => (
                       <li key={feature.id}>
