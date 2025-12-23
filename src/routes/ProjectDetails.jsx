@@ -6,6 +6,8 @@ export default function ProjectDetails() {
   const { t } = useTranslation();
   const { projectDetails } = useGetProjectDetails();
 
+console.log(projectDetails);
+
   const handleShare = (e) => {
     e.preventDefault();
     e.stopPropagation();

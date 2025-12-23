@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import { projects } from './../../utils/data';
 
-export default function ProjectCard({project }) {
+export default function ProductCard({product }) {
   return (
     <Link
-      to={`/project-details/${project?.id}`}
+      to={`/project-details/${product?.id}`}
       className="project_card"
       data-aos="flip-up"
     >
@@ -14,13 +13,13 @@ export default function ProjectCard({project }) {
             <i className="fa-light fa-arrow-right"></i>
           </span>
         </div>
-        <img src={project?.image} alt="circle" />
+        <img src={product?.image} alt="circle" />
       </div>
       <div className="content">
-        <h6>{project?.title}</h6>
-        <p>{project?.description}</p>
+        <h6>{product?.title}</h6>
+        <p>{product?.description}</p>
         <div className="tags">
-          {project?.skills?.map((tag) => {
+          {product?.skills?.map((tag) => {
             return <span key={tag?.id}>{tag?.title}</span>;
           })}
         </div>

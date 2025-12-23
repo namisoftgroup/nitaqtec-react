@@ -12,10 +12,10 @@ export default function BlogCard({ blog }) {
       <div className="content">
         <h5 className="text-dark">{blog.title}</h5>
         <p className="text-muted">{blog.description}</p>
-        <Link to={`/blogs/${blog.id}`}>
+        <span className="text-dark">
           {t("readMore")}
           <i className="fa-regular fa-arrow-left-long"></i>
-        </Link>
+        </span>
       </div>
     </Link>
    </>

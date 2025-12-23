@@ -1,9 +1,9 @@
-import ProjectCard from "../ui/Home/ProjectCard";
 import { useGetCategories } from "../hooks/projects/useGetCategories";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useGetProducts } from "../hooks/Products/useGetProducts";
+import ProductCard from "../ui/Home/ProductCard";
 
 export default function Products() {
   const { t } = useTranslation();
@@ -60,7 +60,7 @@ export default function Products() {
           </div> */}
           {products?.map((product) => (
             <div className=" col-lg-4 col-12 p-2" key={product.id}>
-              <ProjectCard product={product} />
+              <ProductCard product={product} />
             </div>
           ))}
         </div>

@@ -97,7 +97,7 @@ const { data } = useGetAboutCompany();
               <div className="img toDown">
                 <img src={data?.image_two} alt="about" />
               </div>
-              <div className="wabel" d>
+              <div className="wabel">
                 <img src={data?.logo} alt="" />
               </div>
             </div>

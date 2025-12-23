@@ -1785,7 +1785,7 @@ body .service_card p {
   -webkit-box-orient: vertical;
   overflow-y: hidden;
 }
-body .service_card a {
+body .service_card span {
   color: #fff;
 }
 body .service_card img {
@@ -1973,7 +1973,7 @@ body .blog_card .content p {
   overflow-y: hidden;
   color: #231f20;
 }
-body .blog_card .content a {
+body .blog_card .content span {
   color: #231f20;
   display: flex;
   align-items: center;

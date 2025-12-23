@@ -9,6 +9,7 @@ export default function OurProjects() {
   const { t } = useTranslation();
   const { projects } = useGetProjects();
 
+console.log(projects);
 
   
   return (
@@ -39,7 +40,7 @@ export default function OurProjects() {
               }}
             >
               {projects?.map((project) => (
-                <SwiperSlide key={project.id}>
+                <SwiperSlide key={project?.id}>
                   <ProjectCard project={project} />
                 </SwiperSlide>
               ))}

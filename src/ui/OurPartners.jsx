@@ -18,7 +18,7 @@ export default function OurPartners() {
         loop={true}
         modules={[Autoplay]}
         dir={lang === "ar" ? "rtl" : "ltr"}
-        rtl={lang === "ar"}
+        rtl={lang === "ar" ? "true" : "false"}
         key={lang}
         autoplay={{
           delay: 0,
