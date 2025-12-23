@@ -481,6 +481,24 @@ main {
     }
   }
 
+  .partners_section{
+      padding: 60px 0;
+    background: $lightbg;
+    h2 {
+      text-align: center;
+      color: $main;
+      span {
+        color: $second;
+      }
+    }
+    p {
+      text-align: center;
+      color: $gray;
+      width: min(800px, 100%);
+      margin: 0 auto;
+    }
+  }
+
   .contact_page {
     padding: 80px 0;
     @media screen and (max-width: 992px) {

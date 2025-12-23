@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function ServiceCard({ service, gradient }) {
   const { t } = useTranslation();
-  console.log(service);
   
   return (
    <>

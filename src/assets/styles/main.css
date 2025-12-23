@@ -924,6 +924,23 @@ body main .clients_section .logo img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+body main .partners_section {
+  padding: 60px 0;
+  background: #fafafa;
+}
+body main .partners_section h2 {
+  text-align: center;
+  color: #231f20;
+}
+body main .partners_section h2 span {
+  color: #2F3790;
+}
+body main .partners_section p {
+  text-align: center;
+  color: #777;
+  width: min(800px, 100%);
+  margin: 0 auto;
+}
 body main .contact_page {
   padding: 80px 0;
 }
@@ -2047,7 +2064,7 @@ body .packages .btns button.h {
   color: #fff;
   background: #2F3790;
 }
-body .packages h3 {
+body .packages h2 {
   text-align: center;
   font-size: 2rem;
   position: relative;
@@ -2055,9 +2072,15 @@ body .packages h3 {
   color: #2F3790;
   margin-bottom: 12px;
 }
+body .packages p {
+  text-align: center;
+  color: #777;
+  margin: 0 auto;
+  width: min(800px, 100%);
+}
 body .package_card {
-  min-height: 445px;
-  max-height: 450px;
+  min-height: 100%;
+  max-height: 100%;
   border: 1px solid #f4f4f4;
   background: rgba(108, 60, 134, 0.1058823529);
   border-radius: 16px;
@@ -2070,6 +2093,9 @@ body .package_card:hover {
   background: #2F3790;
 }
 body .package_card:hover ul li {
+  color: #fff;
+}
+body .package_card:hover .package_price {
   color: #fff;
 }
 body .package_card h5 {
@@ -2104,6 +2130,14 @@ body .package_card ul li {
 }
 body .package_card ul li i {
   color: #4caf50;
+}
+body .package_card .package_price {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: 16px;
+  color: #2F3790;
 }
 body.en {
   direction: ltr;

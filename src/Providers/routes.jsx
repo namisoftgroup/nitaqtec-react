@@ -9,6 +9,7 @@ import ProjectDetails from "../routes/ProjectDetails";
 import BlogDetails from "../routes/BlogDetails";
 import Blogs from "../routes/Blogs";
 import Services from "../routes/Services";
+import Products from "../routes/Products";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
             element: <ServiceDetails />,
           },
         ],
+      },
+      {
+        path: "products",
+        element: <Products />,
       },
       {
         path: "blogs",

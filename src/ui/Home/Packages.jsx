@@ -8,15 +8,19 @@ function Packages() {
   const [packagesType, setPackagesType] = useState("programming");
   const { t } = useTranslation();
 
+
+  console.log(packages);
+  
   return (
     <section className="packages" id="packages">
       <div className="container">
         <span className="strip2">
           <img src="/Rectangle-5-Copy-3.png" alt="" />
         </span>
-        <h3 data-aos="fade-up">{t("packagesTitle")}</h3>
+        <h2 data-aos="fade-up">{t("packagesTitle")}</h2>
+        <p data-aos="fade-up">{t("packagesSubtitle")}</p>
         <div className="btns" data-aos="fade-up">
-          <button
+          {/* <button
             onClick={() => setPackagesType("programming")}
             className={packagesType === "programming" ? "h" : ""}
           >
@@ -27,11 +31,10 @@ function Packages() {
             className={packagesType === "marketing" ? "h" : ""}
           >
             {t("marketing")}
-          </button>
+          </button> */}
         </div>
         <div className="row justify-content-center">
           {packages
-            ?.filter((p) => p.type === packagesType)
             ?.map((item) => (
               <div
                 className="col-lg-4 col-12 p-2"
@@ -40,7 +43,7 @@ function Packages() {
               >
                 <div className="package_card">
                   <h5>{item.name}</h5>
-                  {item.price && <p className="package_price">{item.price}</p>}
+                  {/* {item.price && <p className="package_price">{item.price}</p>} */}
                   <ul>
                     {item?.features?.map((feature) => (
                       <li key={feature.id}>
@@ -49,7 +52,9 @@ function Packages() {
                         </span>
                         {feature.title}
                       </li>
+                      
                     ))}
+                    <p className="package_price">يبدأ من {item.price} ريال/شهريًا</p>
                   </ul>
                   <Link to="/contact">{t("getThePackage")}</Link>
                 </div>

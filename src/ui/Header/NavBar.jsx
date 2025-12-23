@@ -69,6 +69,10 @@ export default function NavBar() {
         </li>
 
         <li>
+          <Link to="/products">{t("products")}</Link>
+        </li>
+
+        <li>
           <Dropdown
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
@@ -125,7 +129,7 @@ export default function NavBar() {
       ></div>
 
       <div className="actions">
-        {settings?.company_file &&
+        {settings?.company_file && (
           <a
             href={settings?.company_file}
             download={settings?.company_file}
@@ -135,7 +139,7 @@ export default function NavBar() {
           >
             {t("companyFile")}
           </a>
-        }
+        )}
         <button onClick={handleLang}>{lang === "en" ? "AR" : "EN"}</button>
         <button className="menu-button" onClick={toggleMenu}>
           <i className="fa-light fa-bars"></i>

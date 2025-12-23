@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export default function ServiceHeroSection({serviceDetails}) {
   const { t } = useTranslation();
   
-  
   return (
     <section className="service_hero_section">
       <div className="container">
@@ -17,18 +16,14 @@ export default function ServiceHeroSection({serviceDetails}) {
                   <span> {serviceDetails?.title}</span>
                 </h1>
                 <ul>
-                  <li>
-                    <i className="fa-light fa-circle-check"></i>
-                    تصميم وتطوير تطبيقات مخصصة لأنظمة iOS وAndroid
-                  </li>
-                  <li>
-                    <i className="fa-light fa-circle-check"></i>
-                    حلول تقنية مبتكرة لتحسين تجربة المستخدم وتسهيل التفاعل
-                  </li>
-                  <li>
-                    <i className="fa-light fa-circle-check"></i>
-                    تكامل مع أنظمة متعددة لضمان أداء عالي وموثوقية
-                  </li>
+                
+                  {serviceDetails?.sub_features.map((feature) => (
+                    <li key={feature.id}>
+                      <i className="fa-light fa-circle-check"></i>
+                       {feature.title}
+                    </li>
+                  ))}
+                 
                 </ul>
                 <Link to="/contact">{t("requestServiceNow")}</Link>
               </div>

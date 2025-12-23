@@ -28,7 +28,7 @@ export default function RequestServiceModal({ show, setShow }) {
 
   const [formData, setFormData] = useState(initialFormData);
   const { ideas } = useGetIdeaDetails(formData.what_you_need_idea_id);
-console.log(ideas)
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;

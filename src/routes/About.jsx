@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import Faqs from "./../ui/Home/Faqs";
-import Skills from "./../ui/Skills";
 import Testimonials from "../ui/Testimonials";
 import { useGetAboutUs } from "../hooks/About-us/useGetAboutUs";
 import { useGetVisonsMisions } from "../hooks/About-us/useGetVisionsMisions";
+import OurPartners from "../ui/OurPartners";
 
 export default function About() {
   const { t } = useTranslation();
@@ -115,7 +115,7 @@ export default function About() {
 
       <Testimonials/>
       <Faqs />
-      <Skills />
+      <OurPartners />
     </>
   );
 }
