@@ -135,7 +135,7 @@ export default function ContactUs() {
                   />
                 </div>
 
-                <div className="input_field">
+                {/* <div className="input_field">
                   <label htmlFor="type">{t("contactType")}</label>
                   <select
                     name="contact_type"
@@ -174,7 +174,7 @@ export default function ContactUs() {
                       </option>
                     ))}
                   </select>
-                </div>
+                </div> */}
 
                 <button
                   style={{ opacity: loading ? 0.7 : 1 }}

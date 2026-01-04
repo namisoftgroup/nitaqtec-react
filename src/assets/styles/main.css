@@ -2201,12 +2201,17 @@ body.en a.phone-format {
   margin-bottom: -8px;
 }
 
-.floating_btn {
+.contact-btns {
   position: fixed;
   bottom: 48px;
   left: 24px;
-  width: 62px;
-  height: 62px;
+}
+.contact-btns .floating_btn {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background: #fff;
   z-index: 10;
@@ -2214,8 +2219,8 @@ body.en a.phone-format {
   transition: 0.3s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-.floating_btn img {
-  height: 42px;
+.contact-btns .floating_btn img {
+  height: 38px;
 }
 
 a.phone-format {

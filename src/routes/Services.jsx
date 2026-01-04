@@ -9,18 +9,18 @@ import ServiceCard from "../ui/cards/ServiceCard";
 export default function Services() {
   const { t } = useTranslation();
   const { services } = useGetServices();
-  const { categories } = useGetCategories();
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [searchParams, setSearchParams] = useSearchParams();
+  // const { categories } = useGetCategories();
+  // const [activeCategory, setActiveCategory] = useState("all");
+  // const [searchParams, setSearchParams] = useSearchParams();
 
-  useEffect(() => {
-    const category = searchParams.get("category");
-    if (category) {
-      setActiveCategory(category);
-    } else {
-      setActiveCategory("all");
-    }
-  }, [searchParams]);
+  // useEffect(() => {
+  //   const category = searchParams.get("category");
+  //   if (category) {
+  //     setActiveCategory(category);
+  //   } else {
+  //     setActiveCategory("all");
+  //   }
+  // }, [searchParams]);
 
   return (
     <>
@@ -34,7 +34,7 @@ export default function Services() {
       <section className="service_page">
         <div className="container">
           <div className="row">
-            <div className="col-12 p-2">
+            {/* <div className="col-12 p-2">
               <div className="filter">
                 <button
                   className={activeCategory === "all" ? "active" : ""}
@@ -56,7 +56,7 @@ export default function Services() {
                   </button>
                 ))}
               </div>
-            </div>
+            </div> */}
             {services?.map((service, index) => (
               <div key={service.id} className="col-lg-3 col-md-6 col-12 p-2">
                 <ServiceCard service={service} gradient={gradiants[index]} />

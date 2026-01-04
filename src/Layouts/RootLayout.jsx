@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
 import i18n from "../utils/i18n";
@@ -76,10 +76,21 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <Footer />
-      <button className="floating_btn" onClick={() => setShowModal(true)}>
-        <img src="/images/support.svg" alt="support" />
-      </button>
-      <RequestServiceModal show={showModal} setShow={setShowModal} />
+      <div className="d-flex flex-md-column gap-2 contact-btns">
+        <a
+          href="https://wa.me/966920025120"
+          className="floating_btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/images/whatsapp.svg" alt="support" />
+        </a>
+
+        <a href="tel:+966539333104" className="floating_btn">
+          <img src="/images/phone.svg" alt="support" />
+        </a>
+      </div>
+      {/* <RequestServiceModal show={showModal} setShow={setShowModal} /> */}
     </>
   );
 }

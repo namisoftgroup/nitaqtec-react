@@ -41,8 +41,8 @@ export const router = createBrowserRouter(
       ],
     },
   ],
-  {
-    basename: "/nitaqtec-react-build",
-  }
+  // {
+  //   basename: "/nitaqtec-react-build",
+  // }
 );
 

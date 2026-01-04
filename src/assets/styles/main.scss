@@ -55,7 +55,6 @@ body {
         font-size: 22px;
       }
 
-     
       .input_field {
         input,
         select,
@@ -74,8 +73,8 @@ body {
     }
 
     a.phone-format {
-       text-align: left;
-      }
+      text-align: left;
+    }
   }
 }
 
@@ -83,25 +82,31 @@ body {
   margin-bottom: -8px;
 }
 
-.floating_btn {
+.contact-btns {
   position: fixed;
   bottom: 48px;
   left: 24px;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: $white;
-  z-index: 10;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  img {
-    height: 42px;
+
+  .floating_btn {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: $white;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    img {
+      height: 38px;
+    }
   }
 }
 
 a.phone-format {
-              unicode-bidi: plaintext;
-              text-align: right;
-            }
+  unicode-bidi: plaintext;
+  text-align: right;
+}

@@ -79,7 +79,8 @@ export default function NavBar() {
             show={isOpen}
             style={{ position: "relative" }}
           >
-            <Dropdown.Toggle
+            <Link 
+            to="/services"
               style={{
                 backgroundColor: "#fff",
                 outline: "none",
@@ -91,7 +92,7 @@ export default function NavBar() {
               id="dropdown-basic"
             >
               {t("services")}
-            </Dropdown.Toggle>
+            </Link>
             <Dropdown.Menu align="start">
               <div className="scroll_menu">
                 {services?.map((service) => (
