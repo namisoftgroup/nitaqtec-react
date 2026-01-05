@@ -13,8 +13,7 @@ export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    contact_type: "",
-    service_id: "",
+    email_second: "",
   });
   const { t } = useTranslation();
 
@@ -47,7 +46,9 @@ export default function ContactUs() {
                 <div className="blocks">
                   <div className="block">
                     <h6>{t("callCenter")}</h6>
-                    <a className="phone-format" href={`tel:${settings?.phone}`}>{settings?.phone}</a>
+                    <a className="phone-format" href={`tel:${settings?.phone}`}>
+                      {settings?.phone}
+                    </a>
                   </div>
                   <div className="block">
                     <h6>{t("ourLocation")}</h6>
@@ -119,6 +120,23 @@ export default function ContactUs() {
                 </div>
 
                 <div className="input_field">
+                  <label htmlFor="email">{t("email")}</label>
+                  <input
+                    type="email"
+                    name="email_second"
+                    id="email_second"
+                    value={formData.email_second}
+                    placeholder="example@example.com"
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        email_second: e.target.value,
+                      }))
+                    }
+                  />
+                </div>
+
+                <div className="input_field">
                   <label htmlFor="phone">{t("phoneNumber")}</label>
                   <input
                     type="tel"
@@ -134,7 +152,6 @@ export default function ContactUs() {
                     }
                   />
                 </div>
-
                 {/* <div className="input_field">
                   <label htmlFor="type">{t("contactType")}</label>
                   <select
@@ -199,8 +216,6 @@ export default function ContactUs() {
           allowfullscreen=""
           loading="lazy"
         ></iframe>
-
-      
       </div>
     </>
   );
