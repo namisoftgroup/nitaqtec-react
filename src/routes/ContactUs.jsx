@@ -14,6 +14,7 @@ export default function ContactUs() {
     name: "",
     phone: "",
     email_second: "",
+    message:""
   });
   const { t } = useTranslation();
 
@@ -148,6 +149,22 @@ export default function ContactUs() {
                       setFormData((prev) => ({
                         ...prev,
                         phone: e.target.value,
+                      }))
+                    }
+                  />
+                </div>
+                <div className="input_field">
+                  <label htmlFor="message">{t("message")}</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    value={formData.message}
+                    placeholder={t("messagePlaceHolder")}
+                    rows="4"
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        message: e.target.value,
                       }))
                     }
                   />

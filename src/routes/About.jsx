@@ -54,7 +54,9 @@ export default function About() {
                 <p data-aos="fade-up">{aboutData?.description}</p>
                 <h5 data-aos="fade-up">{aboutData?.sub_title_two}</h5>
                 <div data-aos="fade-up">
-                  <Link to="/contact">{t("sendNow")}</Link>
+                  {/* <Link to="/contact">{t("sendNow")}</Link> */}
+                <a href="https://wa.me/+966539333104" target="_blank">{t("sendNow")}</a>
+
                 </div>
               </div>
             </div>

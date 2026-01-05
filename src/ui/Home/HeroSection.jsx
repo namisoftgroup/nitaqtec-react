@@ -20,7 +20,7 @@ export default function HeroSection() {
               <h1 data-aos="flip-right">  {data?.title}</h1>
               <p data-aos="zoom-in">{data?.description}</p>
               <div className="buttons" data-aos="fade-up">
-                <Link to="/contact">{t("contact")}</Link>
+                <a href="https://wa.me/+966539333104" target="_blank">{t("contact")}</a>
                 <Link to="/portfolio">{t("viewProjects")}</Link>
               </div>
             </div>

@@ -37,7 +37,7 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-          <div className="col-12 p-2">
+          {/* <div className="col-12 p-2">
             <div className="filter">
               <button
                 className={activeCategory === "all" ? "active" : ""}
@@ -55,8 +55,8 @@ export default function Portfolio() {
                 </button>
               ))}
             </div>
-          </div>
-          {filteredProjects?.map((project) => (
+          </div> */}
+          {projects?.map((project) => (
             <div className=" col-lg-4 col-12 p-2" key={project.id}>
               <ProjectCard project={project} />
             </div>

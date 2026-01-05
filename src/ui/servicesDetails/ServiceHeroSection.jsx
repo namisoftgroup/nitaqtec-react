@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-export default function ServiceHeroSection({serviceDetails}) {
+export default function 
+ServiceHeroSection({serviceDetails}) {
   const { t } = useTranslation();
   
   return (
@@ -25,7 +26,9 @@ export default function ServiceHeroSection({serviceDetails}) {
                   ))}
                  
                 </ul>
-                <Link to="/contact">{t("requestServiceNow")}</Link>
+                {/* <Link to="/contact">{t("requestServiceNow")}</Link> */}
+                                <a href="https://wa.me/+966539333104" target="_blank">{t("requestServiceNow")}</a>
+
               </div>
             </div>
           </div>

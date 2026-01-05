@@ -78,7 +78,7 @@ export default function RootLayout() {
       <Footer />
       <div className="d-flex flex-md-column gap-2 contact-btns">
         <a
-          href="https://wa.me/966920025120"
+          href="https://wa.me/+966539333104"
           className="floating_btn"
           target="_blank"
           rel="noopener noreferrer"
