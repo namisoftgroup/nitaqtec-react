@@ -48,14 +48,12 @@
   }
 }
 
-
 $main: #231f20;
-$second: #2F3790;
+$second: #2f3790;
 $white: #fff;
 $gray: #777;
 $lightbg: #fafafa;
 $stroke: #f4f4f4;
-
 
 :target {
   scroll-margin-top: 100px;
@@ -176,3 +174,8 @@ li[data-sonner-toast=""] {
   padding: 12px;
 }
 
+h2 {
+  @media screen and (max-width: 576px) {
+    font-size: 24px;
+  }
+}

@@ -37,8 +37,9 @@ export default function Faqs() {
               <p data-aos="fade-up">{t("haveAnotherQuestionSub")}</p>
               <div data-aos="fade-up">
                 {/* <Link to="/contact">{t("contact")}</Link> */}
-                <a href="https://wa.me/+966539333104" target="_blank">{t("contact")}</a>
-
+                <a href="https://wa.me/966550260080" target="_blank">
+                  {t("contact")}
+                </a>
               </div>
             </div>
           </div>

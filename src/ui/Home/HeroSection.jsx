@@ -17,10 +17,12 @@ export default function HeroSection() {
               {/* <h6 data-aos="flip-up"> {t("nitaqNetwork")}</h6> */}
               <h6 data-aos="flip-up"> {data?.sub_title}</h6>
 
-              <h1 data-aos="flip-right">  {data?.title}</h1>
+              <h1 data-aos="flip-right"> {data?.title}</h1>
               <p data-aos="zoom-in">{data?.description}</p>
               <div className="buttons" data-aos="fade-up">
-                <a href="https://wa.me/+966539333104" target="_blank">{t("contact")}</a>
+                <a href="https://wa.me/966550260080" target="_blank">
+                  {t("contact")}
+                </a>
                 <Link to="/portfolio">{t("viewProjects")}</Link>
               </div>
             </div>

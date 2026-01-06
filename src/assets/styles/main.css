@@ -43,7 +43,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2F3790;
+  background: #2f3790;
   height: 300px;
 }
 
@@ -114,13 +114,13 @@ textarea {
   background: #fafafa !important;
 }
 .modal-header h6 {
-  color: #2F3790;
+  color: #2f3790;
   margin-bottom: 0;
 }
 .modal-header .back-button {
   min-width: 40px !important;
   aspect-ratio: 1;
-  border: 1px solid #2F3790;
+  border: 1px solid #2f3790;
   margin-inline-end: 8px;
   border-radius: 100px;
 }
@@ -142,6 +142,12 @@ li[data-sonner-toast=""] {
   padding: 12px;
 }
 
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
 body {
   overflow-x: hidden;
   position: relative;
@@ -155,7 +161,7 @@ body header {
 body header .top_bar {
   width: 100%;
   padding: 8px 0;
-  background: #2F3790;
+  background: #2f3790;
 }
 @media screen and (max-width: 768px) {
   body header .top_bar {
@@ -259,7 +265,7 @@ body header nav .nav-links a {
   transition: 0.3s ease-in-out;
 }
 body header nav .nav-links a:hover, body header nav .nav-links a.active {
-  color: #2F3790;
+  color: #2f3790;
 }
 body header nav .layer {
   display: none;
@@ -288,7 +294,7 @@ body header nav .actions .company_file {
   transition: 0.3s ease-in-out;
 }
 body header nav .actions .company_file:hover {
-  background: #2F3790;
+  background: #2f3790;
 }
 @media screen and (max-width: 576px) {
   body header nav .actions .company_file {
@@ -307,8 +313,8 @@ body header nav .actions button {
   transition: 0.3s ease-in-out;
 }
 body header nav .actions button:hover {
-  color: #2F3790;
-  border: 1px solid #2F3790;
+  color: #2f3790;
+  border: 1px solid #2f3790;
 }
 body header nav .actions .menu-button {
   display: none;
@@ -371,11 +377,16 @@ body footer .col_info h3 {
   color: #231f20;
   position: relative;
 }
+@media screen and (max-width: 576px) {
+  body footer .col_info h3 {
+    font-size: 20px;
+  }
+}
 body footer .col_info h3::after {
   content: "";
   position: absolute;
   height: 3px;
-  background: #2F3790;
+  background: #2f3790;
   border-radius: 4px;
   width: 15%;
   bottom: -8px;
@@ -398,7 +409,12 @@ body footer .col_info ul li a {
   transition: 0.3s ease-in-out;
 }
 body footer .col_info ul li a:hover {
-  color: #2F3790;
+  color: #2f3790;
+}
+@media screen and (max-width: 576px) {
+  body footer .col_info ul li {
+    font-size: 16px;
+  }
 }
 body footer .copy_rights {
   padding: 24px 0;
@@ -554,13 +570,18 @@ body main .hero_section .content h6 {
   width: fit-content;
   font-size: 14px;
   border-radius: 40px;
-  background: #2F3790;
+  background: #2f3790;
 }
 body main .hero_section .content h1 {
   width: min(600px, 100%);
   color: #231f20;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 600;
+}
+@media screen and (max-width: 576px) {
+  body main .hero_section .content h1 {
+    font-size: 24px;
+  }
 }
 body main .hero_section .content p {
   padding-inline-end: 24px;
@@ -577,15 +598,20 @@ body main .hero_section .content .buttons {
 }
 body main .hero_section .content .buttons a {
   padding: 8px 32px;
-  background: #2F3790;
+  background: #2f3790;
   color: #fff;
   border: 1px solid transparent;
   border-radius: 40px;
 }
+@media screen and (max-width: 385px) {
+  body main .hero_section .content .buttons a {
+    font-size: 13px;
+  }
+}
 body main .hero_section .content .buttons a:last-child {
-  color: #2F3790;
+  color: #2f3790;
   background: none;
-  border-color: #2F3790;
+  border-color: #2f3790;
 }
 body main .about_us_section {
   padding: 40px 0 60px;
@@ -657,12 +683,16 @@ body main .about_us_section .content {
   gap: 8px;
 }
 body main .about_us_section .content h6 {
-  color: #2F3790;
+  color: #2f3790;
   font-size: 18px;
+}
+@media screen and (max-width: 576px) {
+  body main .about_us_section .content h6 {
+    font-size: 14px;
+  }
 }
 body main .about_us_section .content h2 {
   color: #231f20;
-  font-size: 42px;
 }
 body main .about_us_section .content p {
   color: #777;
@@ -695,7 +725,7 @@ body main .about_us_section .content .about_footer .r_list ul li {
   font-size: 18px;
 }
 body main .about_us_section .content .about_footer .r_list ul li i {
-  color: #2F3790;
+  color: #2f3790;
 }
 body main .about_us_section .content .about_footer .r_list a {
   width: -moz-fit-content;
@@ -710,7 +740,7 @@ body main .about_us_section .content .about_footer .r_list a {
   transition: 0.3s ease-in-out;
 }
 body main .about_us_section .content .about_footer .r_list a:hover {
-  background: #2F3790;
+  background: #2f3790;
 }
 body main .about_us_section .content .about_footer .statistics {
   background: #fafafa;
@@ -727,7 +757,7 @@ body main .about_us_section .content .about_footer .statistics ul li:last-child 
 }
 body main .about_us_section .content .about_footer .statistics ul li h3 {
   text-align: center;
-  color: #2F3790;
+  color: #2f3790;
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -776,7 +806,7 @@ body main .best_projects .view_more {
   transition: 0.3s ease-in-out;
 }
 body main .best_projects .view_more:hover {
-  background: #2F3790;
+  background: #2f3790;
 }
 body main .faqs_section {
   padding: 60px 0;
@@ -814,7 +844,7 @@ body main .faqs_section .faq_side_content a {
   transition: 0.3s ease-in-out;
 }
 body main .faqs_section .faq_side_content a:hover {
-  background: #2F3790;
+  background: #2f3790;
 }
 body main .faqs_section .accordion {
   display: flex;
@@ -832,7 +862,7 @@ body main .faqs_section .accordion .accordion-item {
   box-shadow: rgba(99, 99, 99, 0.074) 0px 2px 8px 0px;
 }
 body main .faqs_section .accordion .accordion-item.active {
-  background: #2F3790;
+  background: #2f3790;
 }
 body main .faqs_section .accordion .accordion-item.active button {
   color: #fff !important;
@@ -864,7 +894,7 @@ body main .faqs_section .accordion .accordion-item .accordion-button:not(.collap
   transform: rotate(0deg);
 }
 body main .faqs_section .accordion .accordion-item .accordion-button:not(.collapsed) {
-  color: #2F3790 !important;
+  color: #2f3790 !important;
   font-weight: bold;
 }
 body main .faqs_section .accordion .accordion-item .accordion-body {
@@ -903,7 +933,7 @@ body main .clients_section h2 {
   color: #231f20;
 }
 body main .clients_section h2 span {
-  color: #2F3790;
+  color: #2f3790;
 }
 body main .clients_section p {
   text-align: center;
@@ -933,13 +963,18 @@ body main .partners_section h2 {
   color: #231f20;
 }
 body main .partners_section h2 span {
-  color: #2F3790;
+  color: #2f3790;
 }
 body main .partners_section p {
   text-align: center;
   color: #777;
   width: min(800px, 100%);
   margin: 0 auto;
+}
+@media screen and (max-width: 576px) {
+  body main .partners_section p {
+    text-wrap-style: balance;
+  }
 }
 body main .contact_page {
   padding: 80px 0;
@@ -952,7 +987,7 @@ body main .contact_page {
 body main .contact_page .contact_info span {
   color: #fff;
   padding: 4px 12px;
-  background: #2F3790;
+  background: #2f3790;
   border-radius: 40px;
   margin-bottom: 16px;
   display: block;
@@ -962,11 +997,6 @@ body main .contact_page .contact_info span {
 body main .contact_page .contact_info h2 {
   color: #231f20;
   font-size: 22px;
-}
-@media screen and (max-width: 576px) {
-  body main .contact_page .contact_info h2 {
-    font-size: 32px;
-  }
 }
 body main .contact_page .contact_info .blocks {
   margin-top: 16px;
@@ -988,7 +1018,7 @@ body main .contact_page .contact_info .blocks .block a {
   transition: 0.3s ease-in-out;
 }
 body main .contact_page .contact_info .blocks .block a:hover {
-  color: #2F3790;
+  color: #2f3790;
 }
 body main .contact_page .contact_info .blocks .block h6 {
   margin-top: 24px;
@@ -1006,7 +1036,7 @@ body main .portfolio_page .portfolio_header {
   width: 100%;
   padding: 24px 48px 0;
   border-radius: 24px;
-  background: #2F3790;
+  background: #2f3790;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1019,12 +1049,12 @@ body main .portfolio_page .portfolio_header {
   }
 }
 body main .portfolio_page .portfolio_header .text h1 {
-  font-size: 42px;
+  font-size: 32px;
   color: #fff;
 }
 @media screen and (max-width: 576px) {
   body main .portfolio_page .portfolio_header .text h1 {
-    font-size: 32px;
+    font-size: 26px;
     text-align: center;
   }
 }
@@ -1055,15 +1085,25 @@ body main .about_section .content {
 body main .about_section .content h6 {
   width: -moz-fit-content;
   width: fit-content;
-  background: #2F3790;
+  background: #2f3790;
   color: #fff;
   padding: 4px 16px;
   border-radius: 24px;
 }
+@media screen and (max-width: 576px) {
+  body main .about_section .content h6 {
+    font-size: 16px;
+  }
+}
 body main .about_section .content h1 {
   color: #231f20;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 32px;
+}
+@media screen and (max-width: 576px) {
+  body main .about_section .content h1 {
+    font-size: 26px;
+  }
 }
 body main .about_section .content p {
   color: #777;
@@ -1079,7 +1119,7 @@ body main .about_section .content a {
   border-radius: 24px;
 }
 body main .about_section .content a:hover {
-  background: #2F3790;
+  background: #2f3790;
   color: #fff;
 }
 body main .about_section .imgs {
@@ -1094,7 +1134,7 @@ body main .about_section .imgs .success_rate {
   position: absolute;
   bottom: 8px;
   right: 24px;
-  background: #2F3790;
+  background: #2f3790;
   width: 150px;
   border-radius: 12px;
   display: flex;
@@ -1139,7 +1179,7 @@ body main .about_section .imgs .success_rate {
 body main .about_section .imgs .img {
   width: 70%;
   height: 300px;
-  z-index: 9;
+  z-index: 8;
   background: #fff;
   padding: 8px;
   border-radius: 12px;
@@ -1221,6 +1261,12 @@ body main .service_benifits p {
   font-size: 18px;
   color: #231f20;
 }
+@media screen and (max-width: 576px) {
+  body main .service_benifits p {
+    padding-inline-start: 0;
+    font-size: 16px;
+  }
+}
 body main .service_benifits .img {
   width: 100%;
 }
@@ -1252,7 +1298,7 @@ body main .service_benifits ul li {
 body main .service_benifits ul li::before {
   content: "\f00c";
   font-family: "Font Awesome 6 Pro";
-  color: #2F3790;
+  color: #2f3790;
   font-weight: bold;
 }
 body main .what_we_offer {
@@ -1280,6 +1326,11 @@ body main .what_we_offer .box h3 {
   color: #231f20;
   font-size: 24px;
   margin: 0;
+}
+@media screen and (max-width: 576px) {
+  body main .what_we_offer .box h3 {
+    font-size: 22px;
+  }
 }
 body main .what_we_offer .box p {
   margin: 0;
@@ -1312,11 +1363,11 @@ body main .project_details .bordered_bx h6 {
   margin-top: 12px;
 }
 body main .project_details .bordered_bx h6 i {
-  color: #2F3790;
+  color: #2f3790;
   margin-inline-end: 8px;
 }
 body main .project_details .bordered_bx h1 {
-  color: #2F3790;
+  color: #2f3790;
   font-size: 32px;
 }
 body main .project_details .bordered_bx .view_project {
@@ -1350,7 +1401,7 @@ body main .project_details .bordered_bx h4::before {
   width: 15%;
   height: 2px;
   border-radius: 8px;
-  background: #2F3790;
+  background: #2f3790;
 }
 body main .project_details .bordered_bx ul {
   display: flex;
@@ -1364,7 +1415,7 @@ body main .project_details .bordered_bx ul li {
 body main .project_details .bordered_bx ul li::before {
   content: "\f00c";
   font-family: "Font Awesome 6 Pro";
-  color: #2F3790;
+  color: #2f3790;
 }
 body main .blog_details {
   padding: 2rem 0;
@@ -1376,7 +1427,7 @@ body main .blog_details .blog_header {
   background: #fafafa;
   padding: 16px 24px;
   border-radius: 8px 8px 0 0;
-  border-bottom: 1px solid #2F3790;
+  border-bottom: 1px solid #2f3790;
 }
 body main .blog_details .blog_header .blog_header_actions {
   display: flex;
@@ -1388,7 +1439,7 @@ body main .blog_details .blog_header .blog_header_actions .share {
   color: #231f20;
 }
 body main .blog_details .blog_header .blog_header_actions .share:hover {
-  color: #2F3790;
+  color: #2f3790;
 }
 body main .blog_details .blog_header h1 {
   font-size: 1.5rem;
@@ -1438,7 +1489,7 @@ body main .blog_details .recent_blogs ul {
 body main .blog_details .recent_blogs ul li {
   padding: 6px 0;
   color: #231f20;
-  border-bottom: 1px solid #2F3790;
+  border-bottom: 1px solid #2f3790;
 }
 body main .blog_details .recent_blogs ul li a h4 {
   color: #231f20;
@@ -1446,7 +1497,7 @@ body main .blog_details .recent_blogs ul li a h4 {
   transition: color 0.3s ease;
 }
 body main .blog_details .recent_blogs ul li a:hover h4 {
-  color: #2F3790;
+  color: #2f3790;
 }
 body form {
   padding: 24px;
@@ -1500,7 +1551,7 @@ body form .btn i {
 }
 body form button:hover,
 body form .btn:hover {
-  background: #2F3790;
+  background: #2f3790;
   color: #fff;
 }
 body .request_service_modal form {
@@ -1518,7 +1569,7 @@ body .request_service_modal form .title {
   color: #231f20;
 }
 body .request_service_modal form .title span {
-  color: #2F3790;
+  color: #2f3790;
   font-size: 24px;
   font-weight: 600;
 }
@@ -1675,10 +1726,9 @@ body .testimonial_card .owner span {
 body .team {
   padding: 60px 0;
 }
-body .team h3 {
+body .team h2 {
   text-align: center;
   color: #231f20;
-  font-size: 40px;
 }
 body .team p {
   font-size: 16px;
@@ -1993,7 +2043,7 @@ body .service_details_header {
   margin-top: 30px;
   padding: 32px;
   border-radius: 24px;
-  background: #2F3790;
+  background: #2f3790;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2009,6 +2059,11 @@ body .service_details_header .text h1 {
   color: #fff;
   margin: 0;
 }
+@media screen and (max-width: 576px) {
+  body .service_details_header .text h1 {
+    font-size: 26px;
+  }
+}
 body .service_details_header .text p {
   color: #fff;
   text-align: center;
@@ -2017,6 +2072,12 @@ body .service_details_header .text p {
   margin-inline: auto;
   text-wrap-style: balance;
   margin-bottom: 0;
+}
+@media screen and (max-width: 576px) {
+  body .service_details_header .text p {
+    font-size: 16px;
+    width: 100%;
+  }
 }
 body .service_details_header .text ul {
   display: flex;
@@ -2067,23 +2128,22 @@ body .packages .btns {
   margin-bottom: 32px;
 }
 body .packages .btns button {
-  border: 1px solid #2F3790;
+  border: 1px solid #2f3790;
   padding: 4px 32px;
   min-width: 130px;
   border-radius: 100px;
-  color: #2F3790;
+  color: #2f3790;
   transition: 0.3s ease-in-out;
 }
 body .packages .btns button.h {
   color: #fff;
-  background: #2F3790;
+  background: #2f3790;
 }
 body .packages h2 {
   text-align: center;
-  font-size: 2rem;
   position: relative;
   z-index: 1;
-  color: #2F3790;
+  color: #2f3790;
   margin-bottom: 12px;
 }
 body .packages p {
@@ -2104,7 +2164,7 @@ body .package_card {
   transition: 0.3s ease-in-out;
 }
 body .package_card:hover {
-  background: #2F3790;
+  background: #2f3790;
 }
 body .package_card:hover ul li {
   color: #fff;
@@ -2114,7 +2174,7 @@ body .package_card:hover .package_price {
 }
 body .package_card h5 {
   color: #fff;
-  background: #2F3790;
+  background: #2f3790;
   padding: 16px;
   text-align: center;
 }
@@ -2124,7 +2184,7 @@ body .package_card a {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 40px;
-  color: #2F3790;
+  color: #2f3790;
   margin: 0 auto 16px;
   transition: 0.3s ease-in-out;
 }
@@ -2147,11 +2207,11 @@ body .package_card ul li i {
 }
 body .package_card .package_price {
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   margin-top: auto;
   margin-bottom: 16px;
-  color: #2F3790;
+  color: #2f3790;
 }
 body.en {
   direction: ltr;
@@ -2219,6 +2279,7 @@ body.en a.phone-format {
   position: fixed;
   bottom: 48px;
   left: 24px;
+  z-index: 111;
 }
 .contact-btns .floating_btn {
   width: 48px;

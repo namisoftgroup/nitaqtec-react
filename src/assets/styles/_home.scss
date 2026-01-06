@@ -114,8 +114,11 @@ main {
         // width: min(550px, 100%);
         width: min(600px, 100%);
         color: $main;
-        font-size: 36px;
+        font-size: 30px;
         font-weight: 600;
+         @media screen and (max-width: 576px) {
+          font-size: 24px;
+        }
       }
       p {
         padding-inline-end: 24px;
@@ -133,6 +136,9 @@ main {
           color: $white;
           border: 1px solid transparent;
           border-radius: 40px;
+           @media screen and (max-width: 385px) {
+          font-size: 13px;
+        }
           &:last-child {
             color: $second;
             background: none;
@@ -206,10 +212,13 @@ main {
       h6 {
         color: $second;
         font-size: 18px;
+         @media screen and (max-width: 576px) {
+          font-size: 14px;
+        }
       }
       h2 {
         color: $main;
-        font-size: 42px;
+        // font-size: 42px;
       }
       p {
         color: $gray;
@@ -496,6 +505,12 @@ main {
       color: $gray;
       width: min(800px, 100%);
       margin: 0 auto;
+
+ @media screen and (max-width: 576px) {
+          text-wrap-style: balance;
+        }
+
+
     }
   }
 
@@ -518,7 +533,7 @@ main {
         color: $main;
         font-size: 22px;
         @media screen and (max-width: 576px) {
-          font-size: 32px;
+          // font-size: 32px;
         }
       }
       .blocks {
@@ -572,10 +587,10 @@ main {
       }
       .text {
         h1 {
-          font-size: 42px;
+          font-size: 32px;
           color: $white;
           @media screen and (max-width: 576px) {
-            font-size: 32px;
+            font-size: 26px;
             text-align: center;
           }
         }
@@ -609,11 +624,17 @@ main {
         color: $white;
         padding: 4px 16px;
         border-radius: 24px;
+           @media screen and (max-width: 576px) {
+          font-size: 16px;
+        }
       }
       h1 {
         color: $main;
         font-weight: 600;
-        font-size: 42px;
+        font-size: 32px;
+           @media screen and (max-width: 576px) {
+          font-size: 26px;
+        }
       }
       p {
         color: $gray;
@@ -680,7 +701,7 @@ main {
       .img {
         width: 70%;
         height: 300px;
-        z-index: 9;
+        z-index: 8;
         background: $white;
         padding: 8px;
         border-radius: 12px;
@@ -765,6 +786,10 @@ main {
       text-wrap-style: pretty;
       font-size: 18px;
       color: $main;
+         @media screen and (max-width: 576px) {
+          padding-inline-start: 0;
+          font-size: 16px;
+        }
     }
     .img {
       width: 100%;
@@ -823,6 +848,9 @@ main {
         color: $main;
         font-size: 24px;
         margin: 0;
+           @media screen and (max-width: 576px) {
+          font-size: 22px;
+        }
       }
       p {
         margin: 0;
@@ -1224,10 +1252,10 @@ form {
 
 .team {
   padding: 60px 0;
-  h3 {
+  h2 {
     text-align: center;
     color: $main;
-    font-size: 40px;
+    // font-size: 40px;
   }
   p {
     font-size: 16px;

@@ -25,7 +25,7 @@ export default function ServiceHeroSection({ serviceDetails }) {
                   ))}
                 </ul> */}
                 {/* <Link to="/contact">{t("requestServiceNow")}</Link> */}
-                <a href="https://wa.me/+966539333104" target="_blank">
+                <a href="https://wa.me/966550260080" target="_blank">
                   {t("requestServiceNow")}
                 </a>
               </div>

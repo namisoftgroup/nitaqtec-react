@@ -14,9 +14,6 @@ export default function About() {
   const [startCount, setStartCount] = useState(false);
   const { aboutData } = useGetAboutUs();
   const { visionsMisionsData } = useGetVisonsMisions();
-  
-
-
 
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver(
@@ -40,8 +37,6 @@ export default function About() {
     };
   }, []);
 
-
-  
   return (
     <>
       <section className="about_section" ref={sectionRef}>
@@ -55,8 +50,9 @@ export default function About() {
                 <h5 data-aos="fade-up">{aboutData?.sub_title_two}</h5>
                 <div data-aos="fade-up">
                   {/* <Link to="/contact">{t("sendNow")}</Link> */}
-                <a href="https://wa.me/+966539333104" target="_blank">{t("sendNow")}</a>
-
+                  <a href="https://wa.me/966550260080" target="_blank">
+                    {t("sendNow")}
+                  </a>
                 </div>
               </div>
             </div>
@@ -71,7 +67,11 @@ export default function About() {
                     <h3>
                       +
                       {startCount && (
-                        <CountUp duration={3} start={0} end={aboutData?.projects_completed} />
+                        <CountUp
+                          duration={3}
+                          start={0}
+                          end={aboutData?.projects_completed}
+                        />
                       )}
                     </h3>
                     <p>{t("project")}</p>
@@ -79,7 +79,11 @@ export default function About() {
                   <div className="success_rate">
                     <h3>
                       {startCount && (
-                        <CountUp duration={3} start={0} end={aboutData?.success_rate} />
+                        <CountUp
+                          duration={3}
+                          start={0}
+                          end={aboutData?.success_rate}
+                        />
                       )}
                       %
                     </h3>
@@ -94,28 +98,23 @@ export default function About() {
 
       <section className="container mt-5 mb-5">
         <div className="row ">
-         
-         {visionsMisionsData?.map((item)=>(
-           <div key={item.id} className="col-lg-4 col-12 p-2">
-            <div className="borderd_box" data-aos="fade-up">
-              <div className="img">
-                <img src={item?.icon} alt={item?.title} width={80} />
-              </div>
-              <div className="content">
-                <h3>{item?.title}</h3>
-                <p>{item?.description}</p>
+          {visionsMisionsData?.map((item) => (
+            <div key={item.id} className="col-lg-4 col-12 p-2">
+              <div className="borderd_box" data-aos="fade-up">
+                <div className="img">
+                  <img src={item?.icon} alt={item?.title} width={80} />
+                </div>
+                <div className="content">
+                  <h3>{item?.title}</h3>
+                  <p>{item?.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-         ))}
-
-      
-
-
+          ))}
         </div>
       </section>
 
-      <Testimonials/>
+      <Testimonials />
       <Faqs />
       <OurPartners />
     </>

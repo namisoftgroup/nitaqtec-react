@@ -76,9 +76,9 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <Footer />
-      <div className="d-flex flex-md-column gap-2 contact-btns">
+      <div className="d-flex flex-column gap-2 contact-btns">
         <a
-          href="https://wa.me/+966539333104"
+          href="https://wa.me/966550260080"
           className="floating_btn"
           target="_blank"
           rel="noopener noreferrer"
@@ -86,7 +86,7 @@ export default function RootLayout() {
           <img src="/images/whats.svg" alt="support" />
         </a>
 
-        <a href="tel:+966539333104" className="floating_btn">
+        <a href="tel:966550260080" className="floating_btn">
           <img src="/images/call.svg" alt="support" />
         </a>
       </div>

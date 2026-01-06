@@ -23,6 +23,9 @@ footer {
     h3 {
       color: $main;
       position: relative;
+         @media screen and (max-width: 576px) {
+          font-size: 20px;
+        }
       &::after {
         content: "";
         position: absolute;
@@ -50,6 +53,10 @@ footer {
           &:hover {
             color: $second;
           }
+        }
+
+          @media screen and (max-width: 576px) {
+          font-size: 16px;
         }
       }
     }

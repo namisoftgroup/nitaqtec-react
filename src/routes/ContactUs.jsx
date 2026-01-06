@@ -14,7 +14,7 @@ export default function ContactUs() {
     name: "",
     phone: "",
     email_second: "",
-    message:""
+    message: "",
   });
   const { t } = useTranslation();
 
@@ -54,7 +54,7 @@ export default function ContactUs() {
                   <div className="block">
                     <h6>{t("ourLocation")}</h6>
                     <a
-                      href="https://www.google.com/maps/place/King+Abdullah+Park/@24.6474709,46.7602933,12387m/data=!3m1!1e3!4m6!3m5!1s0x3e2f043b45575437:0xa2bebdcec14359bd!8m2!3d24.6663657!4d46.7371594!16s%2Fg%2F11c76mxsyk?entry=ttu&amp;g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
+                      href="https://maps.app.goo.gl/pvfqRRcTL43i58YX9?g_st=ipc"
                       target="_blank"
                     >
                       {settings?.location}

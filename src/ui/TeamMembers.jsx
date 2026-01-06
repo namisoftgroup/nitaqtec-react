@@ -13,7 +13,7 @@ const TeamMembers = () => {
   return (
     <section className="team">
       <div className="container">
-        <h3 data-aos="fade-right">{t("ourTeam")}</h3>
+        <h2 data-aos="fade-right">{t("ourTeam")}</h2>
         <p data-aos="fade-left">{t("ourTeamSubTitle")}</p>
         <Swiper
           spaceBetween={50}
