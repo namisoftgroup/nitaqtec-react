@@ -2010,12 +2010,12 @@ body .service_details_header .text h1 {
 }
 body .service_details_header .text p {
   color: #fff;
-  margin-bottom: 24px;
-}
-body .service_details_header .text h3 {
   text-align: center;
-  color: #fff;
   font-size: 18px;
+  width: 75%;
+  margin-inline: auto;
+  text-wrap-style: balance;
+  margin-bottom: 0;
 }
 body .service_details_header .text ul {
   display: flex;

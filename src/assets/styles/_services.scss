@@ -17,13 +17,19 @@
     }
     p {
       color: $white;
-      margin-bottom: 24px;
-    }
-    h3{
-      text-align: center;
-      color: $white;
+       text-align: center;
       font-size: 18px;
+      width: 75%;
+      margin-inline: auto;
+      text-wrap-style: balance;
+      margin-bottom: 0;
+
     }
+    // h3{
+    //   text-align: center;
+    //   font-size: 18px;
+    //   color: $white;
+    // }
     ul {
       display: flex;
       flex-wrap: wrap;

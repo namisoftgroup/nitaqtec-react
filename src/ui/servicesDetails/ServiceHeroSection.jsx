@@ -15,7 +15,7 @@ export default function ServiceHeroSection({ serviceDetails }) {
                   {/* برمجة تطبيقات الجوال الاحترافية */}
                   <span> {serviceDetails?.title}</span>
                 </h1>
-                <h3>{serviceDetails?.sub_title}</h3>
+                <p>{serviceDetails?.sub_title}</p>
                 {/* <ul>
                   {serviceDetails?.sub_features.map((feature) => (
                     <li key={feature.id}>
