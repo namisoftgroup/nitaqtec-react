@@ -978,6 +978,10 @@ body main .contact_page .contact_info .blocks .block {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  border: 1px solid #f4f4f4;
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
 }
 body main .contact_page .contact_info .blocks .block a {
   color: #231f20;
@@ -2207,8 +2211,8 @@ body.en a.phone-format {
   left: 24px;
 }
 .contact-btns .floating_btn {
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
