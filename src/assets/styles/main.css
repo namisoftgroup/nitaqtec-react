@@ -1211,12 +1211,14 @@ body main .service_benifits {
 }
 body main .service_benifits h2 {
   font-size: 24px;
-  text-align: center;
   color: #231f20;
+  margin-bottom: 22px;
 }
 body main .service_benifits p {
-  text-align: center;
-  color: #777;
+  padding-inline-start: 32px;
+  text-wrap-style: pretty;
+  font-size: 18px;
+  color: #231f20;
 }
 body main .service_benifits .img {
   width: 100%;
@@ -1244,11 +1246,13 @@ body main .service_benifits ul {
 body main .service_benifits ul li {
   display: flex;
   gap: 12px;
+  color: #777;
 }
 body main .service_benifits ul li::before {
   content: "\f00c";
   font-family: "Font Awesome 6 Pro";
   color: #2F3790;
+  font-weight: bold;
 }
 body main .what_we_offer {
   padding: 60px 0;
@@ -1256,7 +1260,7 @@ body main .what_we_offer {
 body main .what_we_offer h2 {
   text-align: center;
   color: #231f20;
-  font-size: 24px;
+  font-size: 26px;
 }
 body main .what_we_offer p {
   text-align: center;
@@ -2007,6 +2011,11 @@ body .service_details_header .text h1 {
 body .service_details_header .text p {
   color: #fff;
   margin-bottom: 24px;
+}
+body .service_details_header .text h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
 }
 body .service_details_header .text ul {
   display: flex;

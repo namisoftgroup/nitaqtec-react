@@ -481,8 +481,8 @@ main {
     }
   }
 
-  .partners_section{
-      padding: 60px 0;
+  .partners_section {
+    padding: 60px 0;
     background: $lightbg;
     h2 {
       text-align: center;
@@ -530,15 +530,15 @@ main {
           display: flex;
           flex-direction: column;
           gap: 12px;
-               border: 1px solid #f4f4f4;
-    background-color: #fafafa;
-           border-radius: 12px;
-            padding: 1.2rem 1rem;
-        
+          border: 1px solid #f4f4f4;
+          background-color: #fafafa;
+          border-radius: 12px;
+          padding: 1.2rem 1rem;
+
           a {
             color: $main;
             transition: 0.3s ease-in-out;
-            
+
             &:hover {
               color: $second;
             }
@@ -755,12 +755,15 @@ main {
     background: $lightbg;
     h2 {
       font-size: 24px;
-      text-align: center;
+      // text-align: center;
       color: $main;
+      margin-bottom: 22px;
     }
     p {
-      text-align: center;
-      color: $gray;
+      padding-inline-start: 32px;
+      text-wrap-style: pretty;
+      font-size: 18px;
+      color: $main;
     }
     .img {
       width: 100%;
@@ -784,10 +787,13 @@ main {
       li {
         display: flex;
         gap: 12px;
+        color: $gray;
+
         &::before {
           content: "\f00c";
           font-family: "Font Awesome 6 Pro";
           color: $second;
+          font-weight: bold;
         }
       }
     }
@@ -798,7 +804,7 @@ main {
     h2 {
       text-align: center;
       color: $main;
-      font-size: 24px;
+      font-size: 26px;
     }
     p {
       text-align: center;

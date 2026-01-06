@@ -1,10 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-export default function 
-ServiceHeroSection({serviceDetails}) {
+export default function ServiceHeroSection({ serviceDetails }) {
   const { t } = useTranslation();
-  
+
   return (
     <section className="service_hero_section">
       <div className="container">
@@ -16,19 +15,19 @@ ServiceHeroSection({serviceDetails}) {
                   {/* برمجة تطبيقات الجوال الاحترافية */}
                   <span> {serviceDetails?.title}</span>
                 </h1>
-                <ul>
-                
+                <h3>{serviceDetails?.sub_title}</h3>
+                {/* <ul>
                   {serviceDetails?.sub_features.map((feature) => (
                     <li key={feature.id}>
                       <i className="fa-light fa-circle-check"></i>
-                       {feature.title}
+                      {feature.title}
                     </li>
                   ))}
-                 
-                </ul>
+                </ul> */}
                 {/* <Link to="/contact">{t("requestServiceNow")}</Link> */}
-                                <a href="https://wa.me/+966539333104" target="_blank">{t("requestServiceNow")}</a>
-
+                <a href="https://wa.me/+966539333104" target="_blank">
+                  {t("requestServiceNow")}
+                </a>
               </div>
             </div>
           </div>
