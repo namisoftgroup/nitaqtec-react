@@ -1216,6 +1216,7 @@ body main .service_benifits h2 {
 }
 body main .service_benifits p {
   padding-inline-start: 32px;
+  text-align: justify;
   text-wrap-style: pretty;
   font-size: 18px;
   color: #231f20;
