@@ -94,14 +94,14 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: $white;
+    // background: $white;
     z-index: 10;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     img {
-      height: 38px;
+      height: 48px;
     }
   }
 }
