@@ -7,6 +7,7 @@ import Testimonials from "../ui/Testimonials";
 import { useGetAboutUs } from "../hooks/About-us/useGetAboutUs";
 import { useGetVisonsMisions } from "../hooks/About-us/useGetVisionsMisions";
 import OurPartners from "../ui/OurPartners";
+import { useGetSettings } from "../hooks/useGetSettings";
 
 export default function About() {
   const { t } = useTranslation();
@@ -14,6 +15,7 @@ export default function About() {
   const [startCount, setStartCount] = useState(false);
   const { aboutData } = useGetAboutUs();
   const { visionsMisionsData } = useGetVisonsMisions();
+  const { settings } = useGetSettings();
 
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver(
@@ -50,7 +52,7 @@ export default function About() {
                 <h5 data-aos="fade-up">{aboutData?.sub_title_two}</h5>
                 <div data-aos="fade-up">
                   {/* <Link to="/contact">{t("sendNow")}</Link> */}
-                  <a href="https://wa.me/966550260080" target="_blank">
+                  <a href={`https://wa.me/${settings?.phone}`} target="_blank"> 
                     {t("sendNow")}
                   </a>
                 </div>

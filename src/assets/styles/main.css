@@ -1738,6 +1738,17 @@ body .team p {
   color: #777777;
   margin: 0 auto 40px;
 }
+body .team .swiper.teamSwiper {
+  padding: 0 0 60px 0 !important;
+}
+body .team .swiper.teamSwiper .swiper-pagination-bullet {
+  border-color: #2f3790;
+}
+body .team .swiper.teamSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+  background: #2f3790;
+  width: 6px;
+  height: 6px;
+}
 body .team-member {
   width: 100%;
   border: 1px solid #eeeeee;

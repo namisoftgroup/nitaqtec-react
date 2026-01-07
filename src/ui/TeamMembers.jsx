@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,10 +17,12 @@ const TeamMembers = () => {
         <h2 data-aos="fade-right">{t("ourTeam")}</h2>
         <p data-aos="fade-left">{t("ourTeamSubTitle")}</p>
         <Swiper
+          modules={[Pagination, Autoplay]}
           spaceBetween={50}
           grabCursor={true}
           pagination={{ clickable: true }}
           loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             992: { slidesPerView: 4 },
             768: { slidesPerView: 3 },

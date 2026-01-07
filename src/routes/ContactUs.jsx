@@ -54,7 +54,7 @@ export default function ContactUs() {
                   <div className="block">
                     <h6>{t("ourLocation")}</h6>
                     <a
-                      href="https://maps.app.goo.gl/pvfqRRcTL43i58YX9?g_st=ipc"
+                      href={settings?.map_link}
                       target="_blank"
                     >
                       {settings?.location}

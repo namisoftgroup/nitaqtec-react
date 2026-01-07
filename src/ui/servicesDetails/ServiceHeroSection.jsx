@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useGetSettings } from "../../hooks/useGetSettings";
 
 export default function ServiceHeroSection({ serviceDetails }) {
   const { t } = useTranslation();
+  const { settings } = useGetSettings();
 
   return (
     <section className="service_hero_section">
@@ -25,7 +27,7 @@ export default function ServiceHeroSection({ serviceDetails }) {
                   ))}
                 </ul> */}
                 {/* <Link to="/contact">{t("requestServiceNow")}</Link> */}
-                <a href="https://wa.me/966550260080" target="_blank">
+                <a href={`https://wa.me/${settings?.phone}`} target="_blank">
                   {t("requestServiceNow")}
                 </a>
               </div>

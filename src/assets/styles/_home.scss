@@ -116,7 +116,7 @@ main {
         color: $main;
         font-size: 30px;
         font-weight: 600;
-         @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) {
           font-size: 24px;
         }
       }
@@ -136,9 +136,9 @@ main {
           color: $white;
           border: 1px solid transparent;
           border-radius: 40px;
-           @media screen and (max-width: 385px) {
-          font-size: 13px;
-        }
+          @media screen and (max-width: 385px) {
+            font-size: 13px;
+          }
           &:last-child {
             color: $second;
             background: none;
@@ -212,7 +212,7 @@ main {
       h6 {
         color: $second;
         font-size: 18px;
-         @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) {
           font-size: 14px;
         }
       }
@@ -506,11 +506,9 @@ main {
       width: min(800px, 100%);
       margin: 0 auto;
 
- @media screen and (max-width: 576px) {
-          text-wrap-style: balance;
-        }
-
-
+      @media screen and (max-width: 576px) {
+        text-wrap-style: balance;
+      }
     }
   }
 
@@ -624,7 +622,7 @@ main {
         color: $white;
         padding: 4px 16px;
         border-radius: 24px;
-           @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) {
           font-size: 16px;
         }
       }
@@ -632,7 +630,7 @@ main {
         color: $main;
         font-weight: 600;
         font-size: 32px;
-           @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) {
           font-size: 26px;
         }
       }
@@ -786,10 +784,10 @@ main {
       text-wrap-style: pretty;
       font-size: 18px;
       color: $main;
-         @media screen and (max-width: 576px) {
-          padding-inline-start: 0;
-          font-size: 16px;
-        }
+      @media screen and (max-width: 576px) {
+        padding-inline-start: 0;
+        font-size: 16px;
+      }
     }
     .img {
       width: 100%;
@@ -848,7 +846,7 @@ main {
         color: $main;
         font-size: 24px;
         margin: 0;
-           @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) {
           font-size: 22px;
         }
       }
@@ -1265,8 +1263,21 @@ form {
     color: #777777;
     margin: 0 auto 40px;
   }
-}
 
+  .swiper.teamSwiper {
+    padding: 0 0 60px 0 !important;
+    .swiper-pagination-bullet {
+      border-color: $second;
+      &.swiper-pagination-bullet-active {
+        &::after {
+          background: $second;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+}
 .team-member {
   width: 100%;
   border: 1px solid #eeeeee;

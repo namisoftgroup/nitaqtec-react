@@ -2,11 +2,13 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useGetBanner } from "../../hooks/home/useGetBanner";
+import { useGetSettings } from "../../hooks/useGetSettings";
 
 export default function HeroSection() {
   const heroImageRef = useRef(null);
   const { t } = useTranslation();
   const { data, error, isLoading } = useGetBanner();
+  const { settings } = useGetSettings();
 
   return (
     <section className="hero_section">
@@ -20,7 +22,7 @@ export default function HeroSection() {
               <h1 data-aos="flip-right"> {data?.title}</h1>
               <p data-aos="zoom-in">{data?.description}</p>
               <div className="buttons" data-aos="fade-up">
-                <a href="https://wa.me/966550260080" target="_blank">
+                <a href={`https://wa.me/${settings?.phone}`} target="_blank">
                   {t("contact")}
                 </a>
                 <Link to="/portfolio">{t("viewProjects")}</Link>

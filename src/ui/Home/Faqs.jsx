@@ -3,10 +3,12 @@ import { Accordion } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useGetFaqs } from "../../hooks/useGetFaqs";
 import SectionHeader from "./SectionHeader";
+import { useGetSettings } from "../../hooks/useGetSettings";
 
 export default function Faqs() {
   const { t } = useTranslation();
   const { faqs } = useGetFaqs();
+  const { settings } = useGetSettings();
 
   return (
     <section className="faqs_section">
@@ -37,7 +39,7 @@ export default function Faqs() {
               <p data-aos="fade-up">{t("haveAnotherQuestionSub")}</p>
               <div data-aos="fade-up">
                 {/* <Link to="/contact">{t("contact")}</Link> */}
-                <a href="https://wa.me/966550260080" target="_blank">
+                <a href={`https://wa.me/${settings?.phone}`} target="_blank">
                   {t("contact")}
                 </a>
               </div>

@@ -6,9 +6,11 @@ import Footer from "../ui/Footer";
 import i18n from "../utils/i18n";
 import AOS from "aos";
 import RequestServiceModal from "../ui/RequestServiceModal";
+import { useGetSettings } from "../hooks/useGetSettings";
 
 export default function RootLayout() {
   const [isSticky, setIsSticky] = useState();
+    const { settings } = useGetSettings();
   const [showModal, setShowModal] = useState(false);
   const location = useLocation();
   const lang = useSelector((state) => state.language.lang);
@@ -78,7 +80,7 @@ export default function RootLayout() {
       <Footer />
       <div className="d-flex flex-column gap-2 contact-btns">
         <a
-          href="https://wa.me/966550260080"
+          href={`https://wa.me/${settings?.phone}`}
           className="floating_btn"
           target="_blank"
           rel="noopener noreferrer"
@@ -86,7 +88,7 @@ export default function RootLayout() {
           <img src="/images/whats.svg" alt="support" />
         </a>
 
-        <a href="tel:966550260080" className="floating_btn">
+        <a href={`tel:${settings?.phone}`} className="floating_btn">
           <img src="/images/call.svg" alt="support" />
         </a>
       </div>
