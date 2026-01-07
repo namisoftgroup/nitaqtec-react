@@ -33,7 +33,6 @@ export default function ContactUs() {
       setLoading(false);
     }
   };
-  console.log(settings);
 
   return (
     <>
@@ -53,10 +52,7 @@ export default function ContactUs() {
                   </div>
                   <div className="block">
                     <h6>{t("ourLocation")}</h6>
-                    <a
-                      href={settings?.map_link}
-                      target="_blank"
-                    >
+                    <a href={settings?.map_link} target="_blank">
                       {settings?.location}
                     </a>
                   </div>
@@ -226,7 +222,7 @@ export default function ContactUs() {
       </section>
       <div className="map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.700714265178!2d39.190066503210446!3d21.519915999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cfebc1cac343%3A0x62916f47ea0aa0f!2z2LTYsdmD2Kkg2KfZhNmG2LfYp9mCINin2YTYtNio2YPZiiDZhNiq2YLZhtmK2Kkg2KfZhNmF2LnZhNmI2YXYp9iq!5e1!3m2!1sar!2seg!4v1766403147188!5m2!1sar!2seg"
+          src={settings?.map_url}
           height="350"
           width="100%"
           style={{ border: "0" }}

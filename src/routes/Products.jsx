@@ -17,7 +17,7 @@ export default function Products() {
     setActiveCategory(category);
   }, [searchParams]);
 
-  console.log(products);
+
   
   // const filteredProjects =
   //   activeCategory === "all"

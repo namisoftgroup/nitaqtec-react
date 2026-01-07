@@ -9,7 +9,6 @@ function Packages() {
   const { t } = useTranslation();
 
 
-  console.log(packages);
   
   return (
     <section className="packages" id="packages">

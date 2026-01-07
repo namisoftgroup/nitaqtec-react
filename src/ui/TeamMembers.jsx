@@ -9,6 +9,7 @@ const TeamMembers = () => {
   const { t } = useTranslation();
   const { data } = useGetTeams();
 
+console.log(data);
 
 
   return (
@@ -37,19 +38,25 @@ const TeamMembers = () => {
                   <img src={member.image} alt={member.name} />
                   <ul className="social-media">
                     <li>
-                      <a href={member?.facebook_link} target="_blank">
+                      {member?.facebook_link && (
+                        <a href={member?.facebook_link} target="_blank">
                         <i className="fa-brands fa-facebook-f"></i>
                       </a>
+                      )}
                     </li>
                     <li>
-                      <a href={member?.instagram_link}>
+                     {member?.instagram_link && (
+                       <a href={member?.instagram_link} target="_blank">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
+                     )}
                     </li>
                     <li>
-                      <a href={member?.twitter_link}>
+                      {member?.twitter_link && (
+                        <a href={member?.twitter_link} target="_blank">
                         <i className="fa-brands fa-twitter"></i>
                       </a>
+                      )}
                     </li>
                   </ul>
                 </div>

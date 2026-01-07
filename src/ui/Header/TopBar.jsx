@@ -10,12 +10,17 @@ export default function TopBar() {
         <div className="location_email">
           <ul>
             <li>
-              <i className="fa-light fa-location-dot"></i>
-              {settings?.address}
+              <a className="d-flex align-items-center gap-2" href={settings?.map_link} target="_blank">
+                <i className="fa-light fa-location-dot"></i>
+                {settings?.location}
+
+              </a>
             </li>
             <li>
-              <i className="fa-light fa-envelope"></i>
-              <a href={`mailto:${settings?.email}`}>{settings?.email}</a>
+              <a className="d-flex align-items-center gap-2" href={`mailto:${settings?.email}`}>
+                <i className="fa-light fa-envelope"></i>
+                {settings?.email}
+              </a>
             </li>
           </ul>
         </div>
@@ -32,7 +37,7 @@ export default function TopBar() {
             </li>
             <li>
               <Link
-                to={settings?.insta}
+                to={settings?.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
               >
